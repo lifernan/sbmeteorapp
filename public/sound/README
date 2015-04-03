@@ -26,6 +26,7 @@ Errors
   lesson_10
     sentences: “We planted some rosebushes” needs to be “We’ve planted some rosebushes” in the male voice
   lesson_11: “My room is cool in the summer” needs to be “My room is cool in summer” in the female voice
+  lesson_12: “Will you please make the bed” needs to be “Will you make the bed” in the female voice
 
 Notes
   Add numbers (0, 1, 2, 3, 4, 5, 6 … 1000) to SB custom CMU pronouncing dictionary
