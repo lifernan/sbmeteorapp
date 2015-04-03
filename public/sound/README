@@ -1,10 +1,12 @@
 Missing files
   lesson_5
     sentences: Who is on the telephone?
+  lesson_7
+    sentences: Can you row a boat?
   lesson_8
-    sentences: everything
-    words: everything
-  lesson_9: Where is the bus stop?
+    sentences: I saw the ball game.
+  lesson_9 
+    sentences: Where is the bus stop?
 
 Soft sounding files
   lesson_4
@@ -13,6 +15,8 @@ Soft sounding files
     words: everything
   lesson_9
     words: mix (some files sound too soft, others too loud)
+  lesson_11
+    words: boot_m sounds strangely hollow
 
 Errors
   lesson_6
@@ -21,4 +25,7 @@ Errors
     words: cot_f is a 46 second long file containing a string of words
   lesson_10
     sentences: “We planted some rosebushes” needs to be “We’ve planted some rosebushes” in the male voice
+  lesson_11: “My room is cool in the summer” needs to be “My room is cool in summer” in the female voice
 
+Notes
+  Add numbers (0, 1, 2, 3, 4, 5, 6 … 1000) to SB custom CMU pronouncing dictionary
