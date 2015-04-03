@@ -25,9 +25,16 @@ Errors
     words: cot_f is a 46 second long file containing a string of words
   lesson_10
     sentences: “We planted some rosebushes” needs to be “We’ve planted some rosebushes” in the male voice
-  lesson_11: “My room is cool in the summer” needs to be “My room is cool in summer” in the female voice
-  lesson_12: “Will you please make the bed” needs to be “Will you make the bed” in the female voice
-  lesson 14: “I go to church on the corner” needs to be “I go to the church on the corner” in the female voice
+  lesson_11: 
+    sentences: “My room is cool in the summer” needs to be “My room is cool in summer” in the female voice
+  lesson_12: 
+    sentences: “Will you please make the bed” needs to be “Will you make the bed” in the female voice
+  lesson 14: 
+    sentences: “I go to church on the corner” needs to be “I go to the church on the corner” in the female voice
+  lesson 15: 
+    sentences: 
+      “The man is very tall” needs to be “That man is very tall” in the male voice
+      “The apple is not ripe” needs to be “This apple is not ripe” in both voices
 
 Notes
   Add numbers (0, 1, 2, 3, 4, 5, 6 … 1000) to SB custom CMU pronouncing dictionary
