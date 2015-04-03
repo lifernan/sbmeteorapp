@@ -1,0 +1,127 @@
+/* Make something awesome! */
+
+/* Thumbnails and Pictures */
+#university-logo {
+  padding-top: 0.2em;
+  width: 170px;
+  padding-right: 0em;
+}
+#university-shield {
+  width: 30px;
+}
+#university-link {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.team-list .thumbnail, 
+.team-list .caption, 
+.lesson-plan .thumbnail, 
+.lesson-plan .caption, 
+.how-it-works .thumbnail {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.profile-picture {
+  width: 135px;
+  height: 135px;
+  border-radius: 1000px;
+}
+.thumbnail {
+  border-style: none;
+}
+.lesson-plan img {
+  width: 35em;
+  border: 1px solid #ddd;
+  margin-left: auto;
+  margin-right: auto;
+}
+.app-screenshot {
+  width: 350px;
+}
+.tilak-description {
+  margin-bottom: 0.3em;
+}
+.tilak-description img {
+  margin-right: 0px;
+  vertical-align: middle;
+}
+
+/* Links */
+p a, p a:visited, 
+.media-heading a, 
+.media-heading a:visited {
+    color: #8669D6;
+}
+p a:hover, p a:active, 
+.media-heading a:hover, 
+.media-heading a:active {
+    color: #725EAB;
+}
+
+/* Nav Bar */
+.navbar-top {
+  background-image: linear-gradient(to bottom, #FDBA13 100%, #f8f8f8 100%);
+}
+.navbar-top .navbar-nav > .open > a,
+.navbar-top .navbar-nav > .active > a {
+  background-image: linear-gradient(to bottom, #EDAE11 100%, #e2e2e2 100%);
+  color: #f5f5f5;
+}
+.navbar-top .navbar-brand {
+  color: #fff;
+}
+.navbar-top .nav > li > a {
+  color: #fff;
+}
+.navbar-top .fa {
+	font-size: 25px;
+}
+
+@media (max-width:767px) { 
+.navbar-top .navbar-right {
+    float: right;
+    padding-right: 15px;
+}
+.navbar-top .nav.navbar-nav.navbar-right li {
+    float: right;
+}
+.navbar-top .nav.navbar-nav.navbar-right li > a {
+    padding:5px 8px;
+}
+.navbar-top .navbar-toggle {
+    float: left
+}
+.navbar-top .navbar-header {
+    float: left;
+    width: auto!important;
+}
+.navbar-top .navbar-collapse {
+    clear: both;
+    float: none;
+}
+}
+
+/* Sign in / Join */
+#login-dropdown-list > .dropdown-toggle {
+	color: #fff;
+}
+
+/* Footer */
+.navbar-fixed-bottom {
+  text-align: center;
+  margin-top: 1em;
+}
+.navbar-fixed-bottom > .container {
+  margin-top: 1em;
+}
+
+/* Welcome Page */
+.jumbotron {
+  background-color: #A6A6DE;
+}
+  
+
+
+
+

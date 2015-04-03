@@ -1,0 +1,77 @@
+<head>
+  <title>Speech Banana</title>
+  <link rel="stylesheet" href="css/sbmeteorapp.css">
+</head>
+
+<body>
+  {{> navigationBar}}
+
+  {{#if currentUser}}
+    {{> userSplash}}
+  {{else}}
+    {{> welcomePage}}
+  {{/if}}
+    
+  {{> footer}}
+</body>
+
+
+<template name="welcomePage">
+  <div class="container welcomePage">
+    splash page to come (Sketch 3)
+  </div>
+</template>
+
+<template name="userSplash">
+  <div class="container">
+    <button class="btn btn-default">Click Me!</button>
+    <p>You've pressed the button {{counter}} times.</p>
+  </div>
+  <div class="container">
+    Hello {{email}}!
+  </div>
+</template>
+
+<template name="navigationBar">
+  <nav class="navbar navbar-default navbar-top" role="navigation" id="home">
+    <div class="container">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-header">
+         <a class="navbar-brand" rel="home" href="#home" title="Speech Banana">
+         Speech Banana
+         </a>
+      </div>
+      <!-- Non-collapsing right-side icons -->
+      <div class="nav navbar-nav navbar-right">
+        <a id="university-link" href="http://www.jhu.edu/">
+          <img class="hidden-xs" id="university-logo" src="img/university_logo_small_horizontal_white.png">
+          <img class="hidden-lg hidden-md hidden-sm" id="university-shield" src="img/university_shield_small_white.png">
+        </a>
+      </div>
+      <!-- the collapsing menu -->
+      <div class="collapse navbar-collapse navbar-left"  id="navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#">About</a></li>
+          {{> loginButtons}}
+        </ul>
+      </div>
+    </div>
+    <!--/.container -->
+  </nav>
+</template>
+
+<template name="footer">
+  <div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <p class="text-muted">
+        <small>&copy; 2015 Speech Banana, Johns Hopkins University</small>
+      </p>
+    </div>
+  </div>
+</template>
