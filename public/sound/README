@@ -1,10 +1,6 @@
 Missing files
-chapter_1
   lesson_5
     sentences: Who is on the telephone?
-  lesson_7
-    sentences: everything
-    words: cot_f is a 46 second long file containing a string of words
   lesson_8
     sentences: everything
     words: everything
@@ -21,6 +17,8 @@ Soft sounding files
 Errors
   lesson_6
     sentences: “I see a palm tree” needs to be “I see the palm tree” in the female voice
+  lesson_7
+    words: cot_f is a 46 second long file containing a string of words
   lesson_10
     sentences: “We planted some rosebushes” needs to be “We’ve planted some rosebushes” in the male voice
 
