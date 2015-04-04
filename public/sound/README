@@ -35,6 +35,8 @@ Errors
     sentences: 
       “The man is very tall” needs to be “That man is very tall” in the male voice
       “The apple is not ripe” needs to be “This apple is not ripe” in both voices
+  lesson 16:
+    sentences: “My wristwatch keeps good time” needs to be “The wristwatch keeps good time” in the male voice
 
 Notes
   Add numbers (0, 1, 2, 3, 4, 5, 6 … 1000) to SB custom CMU pronouncing dictionary
