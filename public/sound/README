@@ -7,6 +7,8 @@ Missing files
     sentences: I saw the ball game.
   lesson_9 
     sentences: Where is the bus stop?
+  lesson_16
+    sentences: Father broke a dish.
 
 Soft sounding files
   lesson_4
@@ -25,17 +27,17 @@ Errors
     words: cot_f is a 46 second long file containing a string of words
   lesson_10
     sentences: “We planted some rosebushes” needs to be “We’ve planted some rosebushes” in the male voice
-  lesson_11: 
+  lesson_11
     sentences: “My room is cool in the summer” needs to be “My room is cool in summer” in the female voice
-  lesson_12: 
+  lesson_12
     sentences: “Will you please make the bed” needs to be “Will you make the bed” in the female voice
-  lesson 14: 
+  lesson_14
     sentences: “I go to church on the corner” needs to be “I go to the church on the corner” in the female voice
-  lesson 15: 
+  lesson_15
     sentences: 
       “The man is very tall” needs to be “That man is very tall” in the male voice
       “The apple is not ripe” needs to be “This apple is not ripe” in both voices
-  lesson 16:
+  lesson_16
     sentences: “My wristwatch keeps good time” needs to be “The wristwatch keeps good time” in the male voice
 
 Notes
@@ -45,4 +47,5 @@ Notes
     sentences: 
       “The policeman searched for the car” sounds like “The policemen searched for the car” 
       sentences 15, 16, and 17 were mismatched between the male and female versions
-   
+  lesson_17
+    sentences: sentences 12 through 25 were mismatched between male and female versions
