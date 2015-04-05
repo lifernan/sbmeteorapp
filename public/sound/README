@@ -16,6 +16,8 @@ Missing files
   lesson_22
     words: blackboard, goodbye, bookcase, pancakes, park
     sentences: “Throw the ball to me.”, “I painted the bookcase blue.”, “Where shall we put the bookcase?”
+  lesson_23
+    words: landlady
 
 Sound issues
   lesson_4
@@ -28,16 +30,17 @@ Sound issues
     words: boot_m sounds strangely hollow
   lesson_20
     words: cube_f, news_f, suit_f, tune_f, use_f have some metallic feedback
-    sentences “Which suitcase would you like?” in the female voice cuts out a bit to early (“like” sounds like “lie”)
+    sentences: “Which suitcase would you like?” in the female voice cuts out a bit to early (“like” sounds like “lie”)
   lesson_21
     words: 
       boil_f, noise_f, sell_f, soybean_f, tell_f, toil_f have some metallic feedback
       soil_m sounds strangely hollow
   lesson_22
-    words:
-      ball_f and ball_m sound soft
-    sentences
-      “Do you play ball?” sounds a bit like “Do you play a ball?” in the male voice
+    words: ball_f and ball_m sound soft
+    sentences: “Do you play ball?” sounds a bit like “Do you play a ball?” in the male voice
+  lesson_23
+    words: bass_m sounds strangely hollow
+    
 
 Errors
   lesson_6
@@ -64,6 +67,8 @@ Errors
     sentences: “We watched the boy catch the fish” needs to be “We watched the boy catch fish” in the male voice
   lesson_22
     sentences: “We crossed the ocean in a large boat” needs to be “We crossed the ocean on a large boat” in the male voice   
+  lesson_23
+    sentences: “Will you plow the land?” needs to be “When will you plow the land?” in the male voice
 
 Notes
   Add numbers (0, 1, 2, 3, 4, 5, 6 … 1000) to SB custom CMU pronouncing dictionary
@@ -86,7 +91,8 @@ Notes
   lesson_22
     sentences:
       “Goodbye” and “Come again” need to be combined into one sound file that says “Goodbye. Come again.”
-
+  lesson_23
+    words: “lamplady” was incorrectly recorded in place of “landlady”
 
 ——————————————————————————————————————————————————————————————————————————————————————
 
@@ -110,7 +116,11 @@ sentences
 
 What hasn’t vetting checked?
 
-Whether extra words or sentences are included in our files for a lesson that are not given in the 
-Whitehurst book. Sometimes these are noticed, but the current vetting process does not explicitly 
-check for these.
+Whether extra words or sentences are included in our files for a lesson that are not given in 
+the Whitehurst book. Sometimes these are noticed, but the current vetting process does not 
+explicitly check for these.
 
+
+Questions?
+
+Contact Lindsey via speechbanana@cis.jhu.edu
