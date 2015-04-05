@@ -20,7 +20,8 @@ Missing files
     words: landlady
   lesson_27
     sentences: “The boy is ten years old.”, “There were ten people at the meeting.”
-
+  lesson_29
+    words: where_f, boot_m
 
 Sound issues
   lesson_4
@@ -97,6 +98,13 @@ Errors
       “Gingerbread is my favorite snack.” needs to be “Gingerbread is my favorite dessert.” in the female voice
       “It’s fun to work on a jigsaw puzzle.” needs to be “It’s fun to work a jigsaw puzzle.” in the male voice
       “The jigsaw puzzle is very difficult.” needs to be “This jigsaw puzzle is very difficult” in the male voice
+  lesson_30
+    sentences: 
+      “Where do these people live?” needs to be “Where to those people live?” in the male voice
+      “Who are these girls?” needs to be “Who are those girls?” in the male voice
+      “What did you think about that?” needs to be “What do you think about that?” in the male voice
+
+
 
 Notes
   Add numbers (0, 1, 2, 3, 4, 5, 6 … 1000) to SB custom CMU pronouncing dictionary
@@ -128,6 +136,10 @@ Notes
     sentences: maybe we should leave out “Redheads are said to have fiery tempers.” because it’s dumb sentence
   lesson_29
     sentences: jelly in “I bought some apple jelly at the store.” sounds like jolly in the female voice
+  lesson_30
+    sentences:
+      27_f and 28_f were both “I heard something.”
+      sentences 28 onward were mismatched between the male and female voices
 
 ——————————————————————————————————————————————————————————————————————————————————————
 
