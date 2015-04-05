@@ -25,6 +25,8 @@ Missing files
   lesson_31
     words: name_m, wane_m
     sentences: “We went to the movies last night” in the female voice
+  lesson_32
+    words: cents
 
 Sound issues
   lesson_4
@@ -151,6 +153,9 @@ Notes
       1_m is incorrectly labeled 1_f
       sentences 23, 25 onward were mismatched between the male and female voices
       23_f contained “The sun was shining” which doesn’t belong in this lesson
+  lesson_32
+    words: sense was probably mistaken to be a homonym for cents
+    sentences: surprised there isn’t some error (check this again, with more sleep)
 
 ——————————————————————————————————————————————————————————————————————————————————————
 
@@ -163,6 +168,7 @@ words
     e.g. found a 46 second long file containing many words in cot_f.wav)
   Check compound words against CMU Pronouncing Dictionary - If the compound word is not in the 
     dictionary, break into its component words (e.g. iceube_m.wav becomes ice_cube_m.wav)
+  Rename homonyms to match lessons
 sentences
   Check against lesson in Whitehurst book: all sentences in lesson should be present
   Make sure corresponding male and female versions match - If the differ, check the book to see 
@@ -174,10 +180,11 @@ sentences
 
 What hasn’t vetting checked?
 
-Whether extra words or sentences are included in our files for a lesson that are not given in 
-the Whitehurst book. Sometimes these are noticed, but the current vetting process does not 
-explicitly check for these.
+Whether extra words or sentences are included in our files for a lesson that are not given in the Whitehurst book. Sometimes these are noticed, but the current vetting process does 
+not explicitly check for these.
 
+  Update: From lesson 27 onward, vetting checks for this for sentences (following 
+    numbering of original filenames).
 
 Questions?
 
