@@ -47,6 +47,8 @@ Sound issues
       wade_f, whale_f, wheel_f, white_f, wide_f have some metallic feedback
   lesson_25
     words: am_m sounds soft
+  lesson_25:
+    words: harry_f and harry_m pronounced somewhat differently (note not problem)
     
 
 Errors
@@ -82,6 +84,10 @@ Errors
     sentences: 
       “Set the table with the mats.” needs to be “Set the table with mats” in the male voice
       “Do you make good marks at school?” needs to be “Did you make good marks at school?” in the male voice
+  lesson_26
+    sentences: 
+      “Do you have a room for me?” needs to be “Do you have room for me?” in the male voice
+      “I think you will need a raincoat” needs to be “I think you will need your raincoat” in the male voice 
 
 Notes
   Add numbers (0, 1, 2, 3, 4, 5, 6 … 1000) to SB custom CMU pronouncing dictionary
@@ -109,6 +115,8 @@ Notes
   lesson_24
     need to incorporate multiple pronunciation handling into phoneme scoring code perhaps
     sentences: 4_f and 5_f were both “We went to the theatre last night”
+  lesson_26
+    sentences: maybe we should leave out “Redheads are said to have fiery tempers.” because it’s dumb sentence
 
 ——————————————————————————————————————————————————————————————————————————————————————
 
