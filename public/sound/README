@@ -90,6 +90,8 @@ Errors
     sentences: 
       “Do you have a room for me?” needs to be “Do you have room for me?” in the male voice
       “I think you will need a raincoat” needs to be “I think you will need your raincoat” in the male voice 
+  lesson_28
+    sentences: “The vines grow all over the fence.” needs to be “The vine grows all over the fence.” in the female voice
 
 Notes
   Add numbers (0, 1, 2, 3, 4, 5, 6 … 1000) to SB custom CMU pronouncing dictionary
