@@ -92,6 +92,11 @@ Errors
       “I think you will need a raincoat” needs to be “I think you will need your raincoat” in the male voice 
   lesson_28
     sentences: “The vines grow all over the fence.” needs to be “The vine grows all over the fence.” in the female voice
+  lesson_29
+    sentences: 
+      “Gingerbread is my favorite snack.” needs to be “Gingerbread is my favorite dessert.” in the female voice
+      “It’s fun to work on a jigsaw puzzle.” needs to be “It’s fun to work a jigsaw puzzle.” in the male voice
+      “The jigsaw puzzle is very difficult.” needs to be “This jigsaw puzzle is very difficult” in the male voice
 
 Notes
   Add numbers (0, 1, 2, 3, 4, 5, 6 … 1000) to SB custom CMU pronouncing dictionary
@@ -121,6 +126,8 @@ Notes
     sentences: 4_f and 5_f were both “We went to the theatre last night”
   lesson_26
     sentences: maybe we should leave out “Redheads are said to have fiery tempers.” because it’s dumb sentence
+  lesson_29
+    sentences: jelly in “I bought some apple jelly at the store.” sounds like jolly in the female voice
 
 ——————————————————————————————————————————————————————————————————————————————————————
 
