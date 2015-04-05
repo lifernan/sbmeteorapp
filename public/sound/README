@@ -13,6 +13,9 @@ Missing files
     words: mouse, mice, moose, town, ten, turn, hound, hand, hind
   lesson_21
     sentences: “This pencil has a sharp point.” in the female voice
+  lesson_22
+    words: blackboard, goodbye, bookcase, pancakes, park
+    sentences: “Throw the ball to me.”, “I painted the bookcase blue.”, “Where shall we put the bookcase?”
 
 Sound issues
   lesson_4
@@ -30,6 +33,11 @@ Sound issues
     words: 
       boil_f, noise_f, sell_f, soybean_f, tell_f, toil_f have some metallic feedback
       soil_m sounds strangely hollow
+  lesson_22
+    words:
+      ball_f and ball_m sound soft
+    sentences
+      “Do you play ball?” sounds a bit like “Do you play a ball?” in the male voice
 
 Errors
   lesson_6
@@ -54,7 +62,8 @@ Errors
     sentences: “The suitcase is very large” needs to be “My suitcase is very large” in the male voice
   lesson_21
     sentences: “We watched the boy catch the fish” needs to be “We watched the boy catch fish” in the male voice
-   
+  lesson_22
+    sentences: “We crossed the ocean in a large boat” needs to be “We crossed the ocean on a large boat” in the male voice   
 
 Notes
   Add numbers (0, 1, 2, 3, 4, 5, 6 … 1000) to SB custom CMU pronouncing dictionary
@@ -74,6 +83,9 @@ Notes
       sentences 8 onward were mismatched between the male and female versions
       7_m and 8_m were both “The boys make so much noise”
       “This pencil has a short point” was recorded but does not exist in the lesson
+  lesson_22
+    sentences:
+      “Goodbye” and “Come again” need to be combined into one sound file that says “Goodbye. Come again.”
 
 
 ——————————————————————————————————————————————————————————————————————————————————————
@@ -82,13 +94,23 @@ How is a lesson vetted?
 
 words
   Check against lesson in Whitehurst book: all words in lesson should be present
-  Play file to make sure filename matches (“book_f.wav” should be a female voice saying book”)
+  Play file to make sure filename matches (“book_f.wav” should be a female voice saying “book”)
   Make sure file is the right length (Should stop playing after the word is said, 
     e.g. found a 46 second long file containing many words in cot_f.wav)
-  Check compound words against CMU Pronouncing Dictionary - If the compound word is not in the dictionary, break into its component words (e.g. iceube_m.wav becomes ice_cube_m.wav)
+  Check compound words against CMU Pronouncing Dictionary - If the compound word is not in the 
+    dictionary, break into its component words (e.g. iceube_m.wav becomes ice_cube_m.wav)
 sentences
   Check against lesson in Whitehurst book: all sentences in lesson should be present
-  Make sure corresponding male and female versions match - If the differ, check the book to see which one is wrong.
-  Make sure compound words are grouped or separated into their component words in the same way as used in the word file names. 
-    (e.g. If pound_cake_f.wav is used, then The_poundcake_is_good_f.wav should be The_pound_cake_is_good_f.wav)
+  Make sure corresponding male and female versions match - If the differ, check the book to see 
+    which one is wrong.
+  Make sure compound words are grouped or separated into their component words in the same way 
+    as used in the word file names. (e.g. If pound_cake_f.wav is used, then 
+    The_poundcake_is_good_f.wav should be The_pound_cake_is_good_f.wav)
+
+
+What hasn’t vetting checked?
+
+Whether extra words or sentences are included in our files for a lesson that are not given in the 
+Whitehurst book. Sometimes these are noticed, but the current vetting process does not explicitly 
+check for these.
 
