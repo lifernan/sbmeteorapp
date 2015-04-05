@@ -45,6 +45,8 @@ Sound issues
     words: 
       bow_f and bow_m are pronounced very differently (bow_f as in bow tie, bow_m as in the bow of a ship)
       wade_f, whale_f, wheel_f, white_f, wide_f have some metallic feedback
+  lesson_25
+    words: am_m sounds soft
     
 
 Errors
@@ -76,6 +78,10 @@ Errors
     sentences: “Will you plow the land?” needs to be “When will you plow the land?” in the male voice
   lesson_24
     sentences: “Where is my key to the car?” needs to be “Where is the key to the car?” in the female voice
+  lesson_25
+    sentences: 
+      “Set the table with the mats.” needs to be “Set the table with mats” in the male voice
+      “Do you make good marks at school?” needs to be “Did you make good marks at school?” in the male voice
 
 Notes
   Add numbers (0, 1, 2, 3, 4, 5, 6 … 1000) to SB custom CMU pronouncing dictionary
