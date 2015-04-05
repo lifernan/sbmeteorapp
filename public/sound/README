@@ -22,6 +22,9 @@ Missing files
     sentences: “The boy is ten years old.”, “There were ten people at the meeting.”
   lesson_29
     words: where_f, boot_m
+  lesson_31
+    words: name_m, wane_m
+    sentences: “We went to the movies last night” in the female voice
 
 Sound issues
   lesson_4
@@ -50,9 +53,10 @@ Sound issues
       wade_f, whale_f, wheel_f, white_f, wide_f have some metallic feedback
   lesson_25
     words: am_m sounds soft
-  lesson_26:
+  lesson_26
     words: Harry_f and Harry_m pronounced somewhat differently (note not problem)
-    
+  lesson_31
+    words: done_m, lame_m, none_m, nose_m, those_m sound strangely hollow and way too loud
 
 Errors
   lesson_6
@@ -103,6 +107,8 @@ Errors
       “Where do these people live?” needs to be “Where to those people live?” in the male voice
       “Who are these girls?” needs to be “Who are those girls?” in the male voice
       “What did you think about that?” needs to be “What do you think about that?” in the male voice
+  lesson_31
+    sentences: “Our car is gray.” needs to be “Our new car is gray” in the male voice
 
 
 
@@ -140,6 +146,11 @@ Notes
     sentences:
       27_f and 28_f were both “I heard something.”
       sentences 28 onward were mismatched between the male and female voices
+  lesson_31
+    sentences: 
+      1_m is incorrectly labeled 1_f
+      sentences 23, 25 onward were mismatched between the male and female voices
+      23_f contained “The sun was shining” which doesn’t belong in this lesson
 
 ——————————————————————————————————————————————————————————————————————————————————————
 
