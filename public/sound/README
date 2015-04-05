@@ -19,6 +19,7 @@ Missing files
   lesson_23
     words: landlady
 
+
 Sound issues
   lesson_4
     words: all female sound soft
@@ -40,6 +41,10 @@ Sound issues
     sentences: “Do you play ball?” sounds a bit like “Do you play a ball?” in the male voice
   lesson_23
     words: bass_m sounds strangely hollow
+  lesson_24
+    words: 
+      bow_f and bow_m are pronounced very differently (bow_f as in bow tie, bow_m as in the bow of a ship)
+      wade_f, whale_f, wheel_f, white_f, wide_f have some metallic feedback
     
 
 Errors
@@ -69,6 +74,8 @@ Errors
     sentences: “We crossed the ocean in a large boat” needs to be “We crossed the ocean on a large boat” in the male voice   
   lesson_23
     sentences: “Will you plow the land?” needs to be “When will you plow the land?” in the male voice
+  lesson_24
+    sentences: “Where is my key to the car?” needs to be “Where is the key to the car?” in the female voice
 
 Notes
   Add numbers (0, 1, 2, 3, 4, 5, 6 … 1000) to SB custom CMU pronouncing dictionary
@@ -93,6 +100,9 @@ Notes
       “Goodbye” and “Come again” need to be combined into one sound file that says “Goodbye. Come again.”
   lesson_23
     words: “lamplady” was incorrectly recorded in place of “landlady”
+  lesson_24
+    need to incorporate multiple pronunciation handling into phoneme scoring code perhaps
+    sentences: 4_f and 5_f were both “We went to the theatre last night”
 
 ——————————————————————————————————————————————————————————————————————————————————————
 
