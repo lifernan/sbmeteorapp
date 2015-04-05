@@ -11,6 +11,8 @@ Missing files
     sentences: Father broke a dish.
   lesson_19
     words: mouse, mice, moose, town, ten, turn, hound, hand, hind
+  lesson_20
+    sentences: 
 
 Soft sounding files
   lesson_4
@@ -21,6 +23,9 @@ Soft sounding files
     words: mix (some files sound too soft, others too loud)
   lesson_11
     words: boot_m sounds strangely hollow
+  lesson_20
+    words: cube_f, news_f, suit_f, tune_f, use_f have some metallic feedback
+    sentences “Which suitcase would you like?” in the female voice cuts out a bit to early (“like” sounds like “lie”)
 
 Errors
   lesson_6
@@ -41,6 +46,10 @@ Errors
       “The apple is not ripe” needs to be “This apple is not ripe” in both voices
   lesson_16
     sentences: “My wristwatch keeps good time” needs to be “The wristwatch keeps good time” in the male voice
+  lesson_20
+    sentences: “The suitcase is very large” needs to be “My suitcase is very large” in the male voice
+      
+   
 
 Notes
   Add numbers (0, 1, 2, 3, 4, 5, 6 … 1000) to SB custom CMU pronouncing dictionary
@@ -51,3 +60,26 @@ Notes
       sentences 15, 16, and 17 were mismatched between the male and female versions
   lesson_17
     sentences: sentences 12 through 25 were mismatched between male and female versions
+  lesson_20
+    sentences: 
+      sentences 7 through 20 were mismatched between the male and female versions
+      20_m and 21_m were both “I have a new brown suit”
+
+
+
+——————————————————————————————————————————————————————————————————————————————————————
+
+How is a lesson vetted?
+
+words
+  Check against lesson in Whitehurst book: all words in lesson should be present
+  Play file to make sure filename matches (“book_f.wav” should be a female voice saying book”)
+  Make sure file is the right length (Should stop playing after the word is said, 
+    e.g. found a 46 second long file containing many words in cot_f.wav)
+  Check compound words against CMU Pronouncing Dictionary - If the compound word is not in the dictionary, break into its component words (e.g. iceube_m.wav becomes ice_cube_m.wav)
+sentences
+  Check against lesson in Whitehurst book: all sentences in lesson should be present
+  Make sure corresponding male and female versions match - If the differ, check the book to see which one is wrong.
+  Make sure compound words are grouped or separated into their component words in the same way as used in the word file names. 
+    (e.g. If pound_cake_f.wav is used, then The_poundcake_is_good_f.wav should be The_pound_cake_is_good_f.wav)
+
