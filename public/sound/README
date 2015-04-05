@@ -11,14 +11,14 @@ Missing files
     sentences: Father broke a dish.
   lesson_19
     words: mouse, mice, moose, town, ten, turn, hound, hand, hind
-  lesson_20
-    sentences: 
+  lesson_21
+    sentences: “This pencil has a sharp point.” in the female voice
 
-Soft sounding files
+Sound issues
   lesson_4
-    words: all female
+    words: all female sound soft
   lesson_5
-    words: everything
+    words: everything sounds soft
   lesson_9
     words: mix (some files sound too soft, others too loud)
   lesson_11
@@ -26,6 +26,10 @@ Soft sounding files
   lesson_20
     words: cube_f, news_f, suit_f, tune_f, use_f have some metallic feedback
     sentences “Which suitcase would you like?” in the female voice cuts out a bit to early (“like” sounds like “lie”)
+  lesson_21
+    words: 
+      boil_f, noise_f, sell_f, soybean_f, tell_f, toil_f have some metallic feedback
+      soil_m sounds strangely hollow
 
 Errors
   lesson_6
@@ -48,7 +52,8 @@ Errors
     sentences: “My wristwatch keeps good time” needs to be “The wristwatch keeps good time” in the male voice
   lesson_20
     sentences: “The suitcase is very large” needs to be “My suitcase is very large” in the male voice
-      
+  lesson_21
+    sentences: “We watched the boy catch the fish” needs to be “We watched the boy catch fish” in the male voice
    
 
 Notes
@@ -64,7 +69,11 @@ Notes
     sentences: 
       sentences 7 through 20 were mismatched between the male and female versions
       20_m and 21_m were both “I have a new brown suit”
-
+  lesson_21
+    sentences:
+      sentences 8 onward were mismatched between the male and female versions
+      7_m and 8_m were both “The boys make so much noise”
+      “This pencil has a short point” was recorded but does not exist in the lesson
 
 
 ——————————————————————————————————————————————————————————————————————————————————————
