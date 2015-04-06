@@ -59,6 +59,9 @@ Sound issues
     words: Harry_f and Harry_m pronounced somewhat differently (note not problem)
   lesson_31
     words: done_m, lame_m, none_m, nose_m, those_m sound strangely hollow and way too loud
+  lesson_33
+    words: cab_m sound quality seems low  
+
 
 Errors
   lesson_6
@@ -111,7 +114,11 @@ Errors
       “What did you think about that?” needs to be “What do you think about that?” in the male voice
   lesson_31
     sentences: “Our car is gray.” needs to be “Our new car is gray” in the male voice
-
+  lesson_33
+    sentences: 
+      “The child seems to be very shy.” needs to be “That child seems to be very shy.” in the male voice
+      “Is she a bashful child?” needs to be “Isn’t she a bashful child?” in the male voice
+      “She changed my mind about the show.” needs to be “She changed her mind about the show.” in the male voice
 
 
 Notes
@@ -156,6 +163,10 @@ Notes
   lesson_32
     words: sense was probably mistaken to be a homonym for cents
     sentences: surprised there isn’t some error (check this again, with more sleep)
+  lesson_33
+    words: 
+      8_m and 9_m were both “The United Nations is trying to ensure the peace”
+      sentences 9 onward were mismatched between the male and female voices
 
 ——————————————————————————————————————————————————————————————————————————————————————
 
