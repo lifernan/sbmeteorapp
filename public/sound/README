@@ -25,8 +25,9 @@ Missing files
   lesson_31
     words: name_m, wane_m
     sentences: “We went to the movies last night” in the female voice
-  lesson_32
-    words: cents
+  lesson_34
+    words: forgave
+
 
 Sound issues
   lesson_4
@@ -119,6 +120,10 @@ Errors
       “The child seems to be very shy.” needs to be “That child seems to be very shy.” in the male voice
       “Is she a bashful child?” needs to be “Isn’t she a bashful child?” in the male voice
       “She changed my mind about the show.” needs to be “She changed her mind about the show.” in the male voice
+  lesson_34
+    sentences: 
+      “The eggplant is good.” needs to be “This eggplant is good.” in the male voice
+      “We raise all our flowers in the greenhouse.” needs to be “We raise all of our flowers in the greenhouse.” in both voices
 
 
 Notes
@@ -167,6 +172,9 @@ Notes
     words: 
       8_m and 9_m were both “The United Nations is trying to ensure the peace”
       sentences 9 onward were mismatched between the male and female voices
+  lesson_34
+    words: forgive was included but is not in the lesson
+    sentences: “Goodbye” and “Please come again” need to be combined into one file that says “Goodbye. Please come again.”
 
 ——————————————————————————————————————————————————————————————————————————————————————
 
