@@ -64,6 +64,8 @@ Sound issues
     words: cab_m sound quality seems low  
   lesson_35
     words: rake_m sounds strangely hollow
+  lesson_37
+    words: holly_f sounds a bit hollow
 
 
 Errors
@@ -132,6 +134,14 @@ Errors
     sentences: 
       “How high is your hill?” needs to be “How high is the hill?” in both voices
       “We climbed a step hill.” needs to be “We climbed a steep hill.” in both voices
+  lesson_37
+    sentences: 
+      “The yellow makes the room brighter.” needs to be “The yellow walls make the room brighter.” in the male voice
+      “There are three feet in the yard.” needs to be “There are three feet in a yard.” in the male voice
+      “What’s a yard?” needs to be “What is in the yard?” in the female voice
+      “We keep the dogs in the backyard.” needs to be “We keep the dog in the backyard.” in the male voice
+      “Have you not seen the Grand Canyon?” needs to be “Have you seen the Grand Canyon?” in the male voice
+
 
 
 Notes
@@ -185,6 +195,10 @@ Notes
     sentences: “Goodbye” and “Please come again” need to be combined into one file that says “Goodbye. Please come again.”
   lesson_36
     sentences: “We climbed a step hill.” was recorded instead of “We climbed a steep hill.”
+  lesson_37
+    sentences:
+      6_f was an erroneous recording of “Where is the yard?” (not in the lesson)
+      sentences from 6 onward were mismatched between male and female voices
 
 
 ——————————————————————————————————————————————————————————————————————————————————————
