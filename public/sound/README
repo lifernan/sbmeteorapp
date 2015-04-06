@@ -128,6 +128,10 @@ Errors
       “We raise all our flowers in the greenhouse.” needs to be “We raise all of our flowers in the greenhouse.” in both voices
   lesson_35
     sentences: “The car is blue.” needs to be “My car is blue.” in the male voice
+  lesson_36
+    sentences: 
+      “How high is your hill?” needs to be “How high is the hill?” in both voices
+      “We climbed a step hill.” needs to be “We climbed a steep hill.” in both voices
 
 
 Notes
@@ -179,6 +183,9 @@ Notes
   lesson_34
     words: forgive was included but is not in the lesson
     sentences: “Goodbye” and “Please come again” need to be combined into one file that says “Goodbye. Please come again.”
+  lesson_36
+    sentences: “We climbed a step hill.” was recorded instead of “We climbed a steep hill.”
+
 
 ——————————————————————————————————————————————————————————————————————————————————————
 
