@@ -66,6 +66,8 @@ Sound issues
     words: rake_m sounds strangely hollow
   lesson_37
     words: holly_f sounds a bit hollow
+  lesson_38
+    words: holly_f sounds a bit hollow
 
 
 Errors
@@ -141,6 +143,12 @@ Errors
       “What’s a yard?” needs to be “What is in the yard?” in the female voice
       “We keep the dogs in the backyard.” needs to be “We keep the dog in the backyard.” in the male voice
       “Have you not seen the Grand Canyon?” needs to be “Have you seen the Grand Canyon?” in the male voice
+  lesson_38
+    sentences: 
+      “Tie this string around the box.” needs to be “Tie the string around the box.” in the female voice
+      “The artist’s brochure is in the museum.” needs to be “The artist’s picture is in the museum.” in the male voice
+      “The picture is hanging on the wall.” needs to be “The picture is hanging in the hall.”
+      
 
 
 
