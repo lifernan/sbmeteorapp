@@ -62,6 +62,8 @@ Sound issues
     words: done_m, lame_m, none_m, nose_m, those_m sound strangely hollow and way too loud
   lesson_33
     words: cab_m sound quality seems low  
+  lesson_35
+    words: rake_m sounds strangely hollow
 
 
 Errors
@@ -124,6 +126,8 @@ Errors
     sentences: 
       “The eggplant is good.” needs to be “This eggplant is good.” in the male voice
       “We raise all our flowers in the greenhouse.” needs to be “We raise all of our flowers in the greenhouse.” in both voices
+  lesson_35
+    sentences: “The car is blue.” needs to be “My car is blue.” in the male voice
 
 
 Notes
