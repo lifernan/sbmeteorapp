@@ -3,6 +3,7 @@
 
 lesson_1 
 Objects and Colors
+
 Vocabulary
 ball, yellow, airplane, blue
 lamp, orange, ice cream, white
@@ -12,18 +13,21 @@ bathtub, white, soap, pink
 flower, purple, chair, green
 comb, brown, table, gray
 
-lesson_2 / random 3
+lesson_2 random 3
 Objects and Associated Verbs
+
 Vocabulary
 throw, ride, eat, read, light, sit, comb, bathe, wash, smell, write, wear
 
-lesson_3 / random 3
+lesson_3 random 3
 Numbers
+
 Vocabulary
 one, two, three, four, five, six, seven, eight, nine
 
 lesson_4
 Opposites and Conversational Phrases
+
 Vocabulary
 boy, girl, up, down
 no, yes, hot, cold
@@ -33,6 +37,7 @@ slow, fast, right, wrong
 
 lesson_5
 Words that Begin a Question
+
 Vocabulary
 where, who, which
 how much, how many, why
@@ -40,12 +45,14 @@ what, when, whose
 
 lesson_6
 Sound of a as in father and o as in hot
+
 Sounds in Words
 watch, wrist watch, stop, stop sign
 hot, hot dog, palm, palm tree, father, grandfather
 
 lesson_7
 Sound of o, as in home
+
 Sounds in Contrast
 hope, hope, rob, robe
 cot, coat, got, goat
@@ -57,6 +64,7 @@ blow, blow out, row, rowboat, soap, soap flakes
 
 lesson_8
 Sound of aw as in law
+
 Sounds in Contrast
 raw, row, caught, cot, walk, woke
 lot, law, low
@@ -69,6 +77,7 @@ walk, sidewalk, law, law school, wall, wall paper
 
 lesson_9
 Sound of u as in up
+
 Sounds in Contrast
 luck, lock, come, comb, must, most
 but, bought, boat
@@ -81,6 +90,7 @@ sun, sunset, cut, short cut, dust, dust pan
 
 lesson_10
 Sound of oo as in look
+
 Sounds in Contrast
 foot, fought, put, pot, stood, stud
 look, lock, luck
@@ -93,6 +103,7 @@ foot, football, bush, rose bush, wood, woodwork
 
 lesson_11
 Sound of oo as in moon
+
 Sounds in Contrast
 fool, full, boot, bought, soon, sun
 boot, boat, but
@@ -105,6 +116,7 @@ shoes, horse shoe, juice, grape juice, spoon, teaspoon
 
 lesson_12
 Sound of a as in gate
+
 Sounds in Contrast
 lain, lawn, game, gum, pale, pull
 ray, raw, row
@@ -117,6 +129,7 @@ make, make up, day, day break, play, playhouse
 
 lesson_13
 Sound of e as in see
+
 Sounds in Contrast
 leave, love, feel, full, seen, soon
 see, so, saw
@@ -130,6 +143,7 @@ bee, beehive, leave, shore leave, tea, teapot
 
 lesson_14
 Sound of er as in berth
+
 Sounds in Contrast
 term, team, burn, boon, skirt, skate
 work, walk, week
@@ -142,6 +156,7 @@ verb, adverb, church, church bell, search, search light
 
 lesson_15
 Sound of a as in cat
+
 Sounds in Contrast
 hat, hurt, fad, feed, rat, rate
 bag, bog, bug
@@ -154,6 +169,7 @@ flag, flagpole, black, blackboard, apple, applesauce
 
 lesson_16
 Sound of i as in it
+
 Sounds in Contrast
 it, at, tin, turn, hit, heat
 pitch, peach, patch
@@ -166,6 +182,7 @@ dish, dish pan, wind, windshield, fish, goldfish
 
 lesson_17
 Sound of e as in met
+
 Sounds in Contrast
 head, hid, leg, lag, ten, turn
 set, sat, seat
@@ -178,6 +195,7 @@ friend, friendship, bell, door bell, guest, guest room
 
 lesson_18
 Sound of i as in five
+
 Sounds in Contrast
 hide, head, kite, cat, sky, skirt
 bite, boat, beet
@@ -190,6 +208,7 @@ sign, sign board, night, midnight, side, outside
 
 lesson_19
 Sound of ou as in out
+
 Sounds in Contrast
 bout, bite, pout, pet, howl, hill
 mouse, mice, moose
@@ -202,6 +221,7 @@ cow, cowboy, down, downtown, out, blow out
 
 lesson_20
 Sound of u as in huge
+
 Sounds in Contrast
 tube, tab, chew, stew, feud, fade
 dew, day, die
@@ -214,6 +234,7 @@ tune, tuneful, cube, ice cube, suit, suitcase
 
 lesson_21
 Sound of oi as in boil
+
 Sounds in Contrast
 boy, bow, toy, tie, toil, tell
 boy, buy, bay
@@ -226,6 +247,7 @@ noise, oyster, enjoy, point, join, employ
 
 lesson_22
 Sound of b as in bay, and p as in pay
+
 Drill
 by, bee, bay
 pay, pea, pie
@@ -246,6 +268,7 @@ lamp, pancakes, keep, park, paper
 
 lesson_23
 Sound of l as in lake
+
 Drill
 lie, low, lay
 lightly, lately, lowly
@@ -266,6 +289,7 @@ let, let down, life, life saver, loud, loudspeaker
 
 lesson_24
 Sound of w as in way, and wh as in white
+
 Drill
 wide, wade, weed
 wheel, white, whale
@@ -286,6 +310,7 @@ when, why, which, while, whistle, where
 
 lesson_25
 Sound of m as in my
+
 Drill
 may, my, me
 am, I’m, arm
@@ -306,6 +331,7 @@ mark, bookmark, meal, oatmeal, mail, mailman
 
 lesson_26
 Sound of r as in rabbit
+
 Drill
 ray, rye, row
 reek, rock, rake
@@ -326,6 +352,7 @@ room, school room, rain, raincoat, row, rowboat
 
 lesson_27
 Sound of d as in den, and t as in ten
+
 Drill
 do, doe, die
 tip, top, tap
@@ -346,6 +373,7 @@ ten, den, tie, die, trunk, drunk
 
 lesson_28
 Sound of v as in vine, and f as in fine
+
 Drill
 fee, foe, fie
 vine, vane, van
@@ -366,6 +394,7 @@ ferry, few, fine, leaf, safe
 
 lesson_29
 Sound of j or soft g as in jell or ginger
+
 Drill
 jay, Joe, joy
 jail, jell, gill
@@ -386,6 +415,7 @@ jelly, jellyfish, jig, jigsaw, June, June bug
 
 lesson_30
 Sound of th as in that, and th as in think
+
 Drill
 thank, thing, thunder
 that, these, there
@@ -406,6 +436,7 @@ Thanksgiving, thought, something, both, theatre, think
 
 lesson_31
 Sound of n as in no
+
 Drill
 no, nay, now
 note, neat, not
@@ -426,6 +457,7 @@ note, notebook, sun, sunset, noon, afternoon
 
 lesson_32
 Sound of z as in zebra, and s or soft c as in sand or cent
+
 Drill
 say, see, sigh
 zee, zoo, Tsar
@@ -446,6 +478,7 @@ sing, sad, cents, sit, sew
 
 lesson_33
 Sound of sh as in ship, and ch as in chip
+
 Drill
 she, shy, shoe
 chip, chap, chop
@@ -466,6 +499,7 @@ child, change, teacher, march, kitchen
 
 lesson_34
 Sound of g as in get
+
 Drill
 go, gay, guy
 get, got, gate
@@ -486,6 +520,7 @@ egg, eggplant, green, green house
 
 lesson_35
 Sound of k or hard c as in kite or cake
+
 Drill
 come, came, comb
 Kate, kite, coat
@@ -506,6 +541,7 @@ black, black out, cut, cute rate
 
 lesson_36
 Sound of h as in heaven
+
 Drill
 hay, he, how
 hole, hail, heel
@@ -526,6 +562,7 @@ hand, handmade, hill, hillside
 
 lesson_37
 Sound of y as in yes
+
 Drill
 you, yes, year
 yacht, yet, yeast
@@ -545,6 +582,7 @@ young, canyon, yours, familiar
 
 lesson_38
 Sound of ng as in king
+
 Drill
 wrong, rang, string, strong
 sing, sang, sung
@@ -559,10 +597,3 @@ rang, ran, ram
 Sounds in Words
 song, stinging, king, hanging, belong, bringing
 rang, singing, wrong, length
-
-
-
-
-
-
-
