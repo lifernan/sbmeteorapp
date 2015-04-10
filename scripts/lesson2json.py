@@ -37,14 +37,17 @@ plan_file = 'lesson_plan.txt'
 with open(plan_file, 'r') as f:
 	content = f.read()
 
+missing_words = open("missing_words.txt", "w")
+
 lessons = content.split("lesson_")[1:]
 for lesson in lessons:
+
 	sets = [s for s in lesson.split("\n\n") if s] # Sets within a lesson are delimited by blank lines
 
 	lesson = sets.pop(0).split("\n") # first 'set' actually describes lesson overall
 
 	lesson_input = lesson[0].split(" ") # input has form: lesson# var1 val1 ... varN valn
-	lesson_number = lesson_input[0]
+	lesson_number = int(lesson_input[0])
 
 	# 0 = word groupings will not be randomized, else = size of each randomly selected lesson set
 	random_group = lesson_input[lesson_input.index('random')+1] if 'random' in lesson_input else 0
@@ -52,14 +55,23 @@ for lesson in lessons:
 	lesson_title = lesson[1]
 
 	for set_number, set in enumerate(sets):
+
 		lines = set.split("\n")
 		set_title = lines.pop(0)
+
 		for group_number, group in enumerate(lines):
 			for word in group.split(", "):
 				for gender in ['f', 'm']:
+
 					filename = join(path, word.replace(" ", "_") + '_' + gender + extension)
+					if not isfile(filename): 
+						missing_words.write(filename + ' ' + str(lesson_number) + ' ' + str(set_number) + ' ' + str(group_number) + '\n')
+						continue
+					
 					all_words.append({'lesson': lesson_number, 'set': set_number, 'group': group_number, \
 					  'word': word, 'gender': gender, 'filename': filename})
+
+missing_words.close()
 
 # Write json to file
 

@@ -59,8 +59,8 @@ cot, coat, got, goat
 calm, comb, odd, ode
 
 Sounds in Words
-snow, snow balls, home, homemade
-blow, blow out, row, rowboat, soap, soap flakes
+snow, snowballs, home, homemade
+blow, blowout, row, rowboat, soap, soap flakes
 
 lesson_8
 Sound of aw as in law
@@ -72,8 +72,8 @@ odd, ode, awed
 fawn, fond, phoned
 
 Sounds in Words
-saw, see saw, ball, ball game
-walk, sidewalk, law, law school, wall, wall paper
+saw, seesaw, ball, ball game
+walk, sidewalk, law, law school, wall, wallpaper
 
 lesson_9
 Sound of u as in up
@@ -86,7 +86,7 @@ done, dawn, Don
 
 Sounds in Words
 one, someone, bus, bus stop
-sun, sunset, cut, short cut, dust, dust pan
+sun, sunset, cut, shortcut, dust, dust pan
 
 lesson_10
 Sound of oo as in look
@@ -98,8 +98,8 @@ pull, pole, Paul
 book, boat, but
 
 Sounds in Words
-book, cookbook, good, good bye
-foot, football, bush, rose bush, wood, woodwork
+book, cookbook, good, goodbye
+foot, football, bush, rosebush, wood, woodwork
 
 lesson_11
 Sound of oo as in moon
@@ -111,8 +111,8 @@ pool, pole, pull
 rude, rod, rowed
 
 Sounds in Words
-room, bathroom, moon, moonshine
-shoes, horse shoe, juice, grape juice, spoon, teaspoon
+room, bathroom, moon, moonlight
+shoes, horseshoe, juice, grape juice, spoon, teaspoon
 
 lesson_12
 Sound of a as in gate
@@ -124,8 +124,8 @@ say, so, sue
 take, talk, took
 
 Sounds in Words
-sail, sail boat, shade, lamp shade
-make, make up, day, day break, play, playhouse
+sail, sailboat, shade, lamp shade
+make, makeup, day, daybreak, play, playhouse
 
 lesson_13
 Sound of e as in see
@@ -137,9 +137,8 @@ keep, cape, cup
 feet, foot, fate
 
 Sounds in Words
-see, see saw, wheat, whole wheat
+see, seesaw, wheat, whole wheat
 bee, beehive, leave, shore leave, tea, teapot
-
 
 lesson_14
 Sound of er as in berth
@@ -152,7 +151,7 @@ firm, fame, farm
 
 Sounds in Words
 earth, earthquake, turn, turnpike
-verb, adverb, church, church bell, search, search light
+verb, adverb, church, church bell, search, searchlight
 
 lesson_15
 Sound of a as in cat
@@ -191,7 +190,7 @@ men, moan, main
 
 Sounds in Words
 head, headache, bread, cornbread
-friend, friendship, bell, door bell, guest, guest room
+friend, friendship, bell, doorbell, guest, guest room
 
 lesson_18
 Sound of i as in five
@@ -216,8 +215,8 @@ town, ten, turn
 hound, hand, hind
 
 Sounds in Words
-pound, poundcake, south, southeast
-cow, cowboy, down, downtown, out, blow out
+pound, pound cake, south, southeast
+cow, cowboy, down, downtown, out, blowout
 
 lesson_20
 Sound of u as in huge
@@ -262,9 +261,8 @@ boast, post, bent, pent
 rib, rip, cab, cap
 
 Sounds in Words / b, p
-blackboard, boat, goodbye, ball, bookcase
+blackboard, boat, goodbye, ball, book case
 lamp, pancakes, keep, park, paper
-
 
 lesson_23
 Sound of l as in lake
@@ -275,7 +273,7 @@ lightly, lately, lowly
 holly, holy, hilly
 bill, bell, bull
 toll, tale, tell
-doll, deal dull
+doll, deal, dull
 
 Sounds in Contrast
 lay, bay, bass, lass, rip, rill
@@ -285,7 +283,7 @@ pie, tie, buy
 
 Sounds in Words
 lamp, lamp shade, land, landlady
-let, let down, life, life saver, loud, loudspeaker
+let, letdown, life, lifesaver, loud, loudspeaker
 
 lesson_24
 Sound of w as in way, and wh as in white
@@ -326,7 +324,7 @@ came, cape, kale
 where, bear, mare
 
 Sounds in Words
-mouse, mouse trap, mat, door mat
+mouse, mousetrap, mat, doormat
 mark, bookmark, meal, oatmeal, mail, mailman
 
 lesson_26
@@ -348,7 +346,7 @@ row, bow, low
 
 Sounds in Words
 red, redhead, run, home run
-room, school room, rain, raincoat, row, rowboat
+room, schoolroom, rain, raincoat, row, rowboat
 
 lesson_27
 Sound of d as in den, and t as in ten
@@ -410,7 +408,7 @@ gin, win, bin
 edge, egg, ebb
 
 Sounds in Words
-ginger, gingerbread, Jack, jack knife, 
+ginger, gingerbread, Jack, jack knife
 jelly, jellyfish, jig, jigsaw, June, June bug
 
 lesson_30
@@ -460,7 +458,7 @@ Sound of z as in zebra, and s or soft c as in sand or cent
 
 Drill
 say, see, sigh
-zee, zoo, Tsar
+zee, zoo, Czar
 reason, raisin, risen
 rose, raze, rise
 bus, boss, base
@@ -515,8 +513,8 @@ dig, dip, dim
 goose, loose, moose
 
 Sounds in Words
-got, forgot, good, good bye, gold, goldfish
-egg, eggplant, green, green house
+got, forgot, good, goodbye, gold, goldfish
+egg, eggplant, green, greenhouse
 
 lesson_35
 Sound of k or hard c as in kite or cake
@@ -536,8 +534,8 @@ coat, note, vote
 wake, wade, wait
 
 Sounds in Words
-keep, book keeper, care, carefree, car, car fare
-black, black out, cut, cute rate
+keep, bookkeeper, care, carefree, car, car fare
+black, blackout, cut, cut rate
 
 lesson_36
 Sound of h as in heaven
