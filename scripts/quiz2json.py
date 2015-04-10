@@ -23,11 +23,13 @@ for lesson in lessons:
 	lesson_number = int(lesson.split("_")[1])
 	lesson_path = join(path, lesson)
 	sentences = [s for s in listdir(lesson_path) if extension in s]
-
+	lesson_path = lesson_path.split('public/')[1]
+	
 	for sentence_filename in sentences:
 		sentence = sentence_filename.split(".")[0].replace("_", " ")
 		gender = sentence[-1]
 		sentence = sentence[:-2]
+
 		all_sentences.append({'quiz': lesson_number, 'gender': gender, 'sentence': sentence, \
 		  'filename': join(lesson_path, sentence_filename)})
 

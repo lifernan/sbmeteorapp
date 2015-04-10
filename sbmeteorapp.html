@@ -28,9 +28,24 @@
     <p>You've pressed the button {{counter}} times.</p>
   </div>
   <div class="container">
-    Hello {{email}}!
+    Hello {{displayName}}!
   </div>
-</template>
+  <ul>
+    {{#each words}}
+    <li>
+      <button class="audio btn btn-default">
+        {{word}}
+        <span class="glyphicon glyphicon-play"></span>
+        <audio src="{{filename}}" ></audio>
+      </button>
+    </li>
+    {{/each}}
+  </ul>
+ </template>
+
+
+
+
 
 <template name="navigationBar">
   <nav class="navbar navbar-default navbar-top" role="navigation" id="home">

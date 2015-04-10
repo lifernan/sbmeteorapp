@@ -68,6 +68,7 @@ for lesson in lessons:
 						missing_words.write(filename + ' ' + str(lesson_number) + ' ' + str(set_number) + ' ' + str(group_number) + '\n')
 						continue
 					
+					filename = filename.split('public/')[1]
 					all_words.append({'lesson': lesson_number, 'set': set_number, 'group': group_number, \
 					  'word': word, 'gender': gender, 'filename': filename})
 
