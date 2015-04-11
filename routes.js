@@ -10,4 +10,6 @@ Router.map(function () {
 			this.render();
 		}
 	});
+	this.route('about', {path: '/about/'});
+	this.route('progress', {path: '/progress/'});
 });

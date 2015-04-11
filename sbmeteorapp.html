@@ -40,8 +40,8 @@
 
     <form role="form">
       <div class="radio">
-        <label><input type="radio" id="male" name="optradio" checked={{isChecked}} />Male</label>
-        <label><input type="radio" id="female" name="optradio" checked={{isChecked}} />Female</label>
+        <label><input type="radio" id="male" name="optradio" checked={{isChecked 'm'}} />Male</label>
+        <label><input type="radio" id="female" name="optradio" checked={{isChecked 'f'}} />Female</label>
       </div>
     </form>
 
@@ -101,6 +101,21 @@
   <button class="quiz-next btn btn-default">Next</button> <!-- Will eventually combine with submit button-->
 </template>
 
+<template name="about">
+  {{> navigationBar}}  <!-- Temporary: Until I can get the route.js layoutTemplate working -->
+  <div class="container main"> <!-- Temporary: Until I can get the route.js layoutTemplate working -->
+  About! Summary of what app does and how to use it
+  </div>
+  {{> footer}} <!-- Temporary: Until I can get the route.js layoutTemplate working -->
+</template>
+
+<template name="progress">
+  {{> navigationBar}}  <!-- Temporary: Until I can get the route.js layoutTemplate working -->
+  <div class="container main"> <!-- Temporary: Until I can get the route.js layoutTemplate working -->
+  Progress: graphs of data from sentence tests
+  </div>
+  {{> footer}} <!-- Temporary: Until I can get the route.js layoutTemplate working -->
+</template>
 
 <template name="navigationBar">
   <nav class="navbar navbar-default navbar-top" role="navigation" id="home">
@@ -112,7 +127,7 @@
       <span class="icon-bar"></span>
       </button>
       <div class="navbar-header">
-         <a class="navbar-brand" rel="home" href="{{pathFor 'appBody'}}" title="Speech Banana">
+         <a class="navbar-brand" rel="home" id="brand" href="{{pathFor 'appBody'}}" title="Speech Banana">
          Speech Banana
          </a>
       </div>
@@ -126,8 +141,11 @@
       <!-- the collapsing menu -->
       <div class="collapse navbar-collapse navbar-left"  id="navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="{{pathFor 'appBody'}}">Home</a></li>
-          <li><a href="#">About</a></li>
+          <!-- <li class={{activeNav 'home'}} id='home'><a href="{{pathFor 'appBody'}}">Home</a></li>  Considering geting rid of this button. Don't want it but perhaps users expect it? -->
+          <li class={{activeNav 'about'}} id='about'><a href="{{pathFor 'about'}}">About</a></li>
+          {{#if currentUser}}
+          <li class={{activeNav 'progress'}} id='progress'><a href="{{pathFor 'progress'}}">Progress</a></li> <!-- Maybe we could call it a log or practice log instead -->
+          {{/if}}
           {{> loginButtons}}
         </ul>
       </div>
