@@ -45,39 +45,53 @@
     </div>
     <button type="button" class="quiz {{activeQuiz}} btn btn-default">Quiz</button>
     <br>
-
-    <div class="btn-group" role="group" aria-label="...">
-      {{#each groups}}
-      <button type="button" class="word-group {{activeGroup}} btn btn-default">{{group}}</button>
-      {{/each}}
-    </div>
     <br>
 
-    <ul>
-      {{#each words}}
-      <li>
-        <button class="audio btn btn-default">
-          {{word}}
-          <span class="glyphicon glyphicon-play"></span>
-          <audio src="{{filename}}" ></audio>
-        </button>
-      </li>
-      {{/each}}
-    </ul>
+    {{#if activeQuiz}}
+      {{> quiz}}
+    {{else}}
+      <div class="btn-group" role="group" aria-label="...">
+        {{#each groups}}
+        <button type="button" class="word-group {{activeGroup}} btn btn-default">{{group}}</button>
+        {{/each}}
+      </div>
+      <br>
 
-    <ul>
-      {{#each sentences}}
-      <li>
-        <button class="audio btn btn-default">
-          {{sentence}}
-          <span class="glyphicon glyphicon-play"></span>
-          <audio src="{{filename}}" ></audio>
-        </button>
-      </li>
-      {{/each}}
-    </ul>
+      <ul>
+        {{#each words}}
+        <li>
+          <button class="audio btn btn-default">
+            {{word}}
+            <span class="glyphicon glyphicon-play"></span>
+            <audio src="{{filename}}" ></audio>
+          </button>
+        </li>
+        {{/each}}
+      </ul>
+    {{/if}}
+
   </div>
+    
   <!--{{> footer}} Temporary: Until I can get the route.js layoutTemplate working -->
+</template>
+
+<template name="quiz">
+  {{#each sentences}}
+  <button class="audio btn btn-default">
+    {{sentence}}
+    <span class="glyphicon glyphicon-play"></span>
+    <audio src="{{filename}}" ></audio>
+  </button>
+  {{/each}}
+  
+  <br>
+  <form class="user-guess" role="form">
+    <input type="text" name="text" class="form-control" placeholder="Enter sentence." />
+    <input type="submit" value="submit" class="btn btn-default" />
+  </form>
+
+  <br>
+  <button class="quiz-next btn btn-default">Next</button> <!-- Will eventually combine with submit button-->
 </template>
 
 
