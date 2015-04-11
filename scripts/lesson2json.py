@@ -35,6 +35,8 @@ extension = '.wav'
 # Load lesson plan
 
 all_lessons = []
+all_sets = []    # temporary hack!!
+all_groups = []  # temporary hack!!
 all_words = []
 
 plan_file = 'lesson_plan.txt'
@@ -61,16 +63,22 @@ for lesson in lessons:
 
 	for set_number, set in enumerate(sets):
 
+		set_number = str(set_number + 1)
 		lines = set.split("\n")
 		set_title = lines.pop(0)
+		all_sets.append({'lesson': lesson_number, 'set': set_number, 'title': set_title})
 
 		for group_number, group in enumerate(lines):
+
+			group_number = str(group_number + 1)
+			all_groups.append({'lesson': lesson_number, 'set': set_number, 'group': group_number})
+
 			for word in group.split(", "):
 				for gender in ['f', 'm']:
 
 					filename = join(path, word.replace(" ", "_") + '_' + gender + extension)
 					if not isfile(filename): 
-						missing_words.write(filename + ' ' + str(lesson_number) + ' ' + str(set_number) + ' ' + str(group_number) + '\n')
+						missing_words.write(filename + ' ' + lesson_number + ' ' + set_number + ' ' + group_number + '\n')
 						continue
 					
 					filename = filename.split('public/')[1]
@@ -83,6 +91,12 @@ missing_words.close()
 
 with open("json_lesson_loader.txt", "w") as loader:
 	json.dump(all_lessons, loader, indent=4)
+
+with open("json_set_loader.txt", "w") as loader:
+	json.dump(all_sets, loader, indent=4)
+
+with open("json_group_loader.txt", "w") as loader:
+	json.dump(all_groups, loader, indent=4)
 
 with open("json_word_loader.txt", "w") as loader:
 	json.dump(all_words, loader, indent=4)

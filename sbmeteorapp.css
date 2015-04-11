@@ -121,6 +121,10 @@ p a:hover, p a:active,
   background-color: #A6A6DE;
 }
   
+/* Main part of body */
+.main {
+  padding-bottom: 3em;
+}
 
 
 

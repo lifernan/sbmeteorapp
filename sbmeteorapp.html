@@ -16,13 +16,13 @@
 </template>
 
 <template name="welcomePage">
-  <div class="container welcomePage">
+  <div class="container main welcomePage">
     Welcome stranger!
   </div>
 </template>
 
 <template name="lessonShow">
-  <div class="container">
+  <div class="container main">
     {{#each lessons}}
     <p>
       <a href="{{pathFor 'wordSetShow'}}">
@@ -34,9 +34,25 @@
  </template>
 
 <template name="wordSetShow">
-  {{> navigationBar}} <!-- Temporary: Until I can get the route.js layoutTemplate working -->
-  <div class="container">
-    Really we should be seeing a lesson here.
+  {{> navigationBar}}  <!-- Temporary: Until I can get the route.js layoutTemplate working -->
+
+  <div class="container main"> <!-- Temporary: Until I can get the route.js layoutTemplate working -->
+
+    <div class="btn-group" role="group" aria-label="...">
+      {{#each sets}}
+      <button type="button" class="word-set {{activeSet}} btn btn-default">{{title}}</button>
+      {{/each}}
+    </div>
+    <button type="button" class="quiz {{activeQuiz}} btn btn-default">Quiz</button>
+    <br>
+
+    <div class="btn-group" role="group" aria-label="...">
+      {{#each groups}}
+      <button type="button" class="word-group {{activeGroup}} btn btn-default">{{group}}</button>
+      {{/each}}
+    </div>
+    <br>
+
     <ul>
       {{#each words}}
       <li>
@@ -48,11 +64,21 @@
       </li>
       {{/each}}
     </ul>
+
+    <ul>
+      {{#each sentences}}
+      <li>
+        <button class="audio btn btn-default">
+          {{sentence}}
+          <span class="glyphicon glyphicon-play"></span>
+          <audio src="{{filename}}" ></audio>
+        </button>
+      </li>
+      {{/each}}
+    </ul>
   </div>
-  {{> footer}} <!-- Temporary: Until I can get the route.js layoutTemplate working -->
+  <!--{{> footer}} Temporary: Until I can get the route.js layoutTemplate working -->
 </template>
-
-
 
 
 <template name="navigationBar">
