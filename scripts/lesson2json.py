@@ -19,6 +19,9 @@
 # Output: json_lesson_loader.txt
 #   [{lesson: #, group: #, word: "word", gender: "Gender", filename: "chapter_#/lesson_#/word_gender.wav"}, ...
 #   {sentence: "full space delimited sentence", gender: "Gender", filename: "chapter_#/lesson_#/word_gender.wav"}]
+#
+# To do: Update field names for lessons
+#
 
 from os import listdir
 from os.path import isfile, join
@@ -31,6 +34,7 @@ extension = '.wav'
 
 # Load lesson plan
 
+all_lessons = []
 all_words = []
 
 plan_file = 'lesson_plan.txt'
@@ -47,12 +51,13 @@ for lesson in lessons:
 	lesson = sets.pop(0).split("\n") # first 'set' actually describes lesson overall
 
 	lesson_input = lesson[0].split(" ") # input has form: lesson# var1 val1 ... varN valn
-	lesson_number = int(lesson_input[0])
+	lesson_number = lesson_input[0] # int(lesson_input[0])
 
 	# 0 = word groupings will not be randomized, else = size of each randomly selected lesson set
 	random_group = lesson_input[lesson_input.index('random')+1] if 'random' in lesson_input else 0
 
 	lesson_title = lesson[1]
+	all_lessons.append({'_id': lesson_number, 'lesson_title': lesson_title})
 
 	for set_number, set in enumerate(sets):
 
@@ -77,6 +82,9 @@ missing_words.close()
 # Write json to file
 
 with open("json_lesson_loader.txt", "w") as loader:
+	json.dump(all_lessons, loader, indent=4)
+
+with open("json_word_loader.txt", "w") as loader:
 	json.dump(all_words, loader, indent=4)
 
 

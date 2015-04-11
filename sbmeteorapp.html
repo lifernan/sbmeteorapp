@@ -3,46 +3,54 @@
   <link rel="stylesheet" href="css/sbmeteorapp.css">
 </head>
 
-<body>
+<template name="appBody">
   {{> navigationBar}}
 
   {{#if currentUser}}
-    {{> userSplash}}
+    {{> lessonShow}}
   {{else}}
     {{> welcomePage}}
   {{/if}}
     
   {{> footer}}
-</body>
-
+</template>
 
 <template name="welcomePage">
   <div class="container welcomePage">
-    splash page to come (Sketch 3)
+    Welcome stranger!
   </div>
 </template>
 
-<template name="userSplash">
+<template name="lessonShow">
   <div class="container">
-    <button class="btn btn-default">Click Me!</button>
-    <p>You've pressed the button {{counter}} times.</p>
-  </div>
-  <div class="container">
-    Hello {{displayName}}!
-  </div>
-  <ul>
-    {{#each words}}
-    <li>
-      <button class="audio btn btn-default">
-        {{word}}
-        <span class="glyphicon glyphicon-play"></span>
-        <audio src="{{filename}}" ></audio>
-      </button>
-    </li>
+    {{#each lessons}}
+    <p>
+      <a href="{{pathFor 'wordSetShow'}}">
+        <button class='lesson btn btn-default'>{{_id}}: {{lesson_title}}</button>
+      </a>
+    </p>
     {{/each}}
-  </ul>
+  </div>
  </template>
 
+<template name="wordSetShow">
+  {{> navigationBar}} <!-- Temporary: Until I can get the route.js layoutTemplate working -->
+  <div class="container">
+    Really we should be seeing a lesson here.
+    <ul>
+      {{#each words}}
+      <li>
+        <button class="audio btn btn-default">
+          {{word}}
+          <span class="glyphicon glyphicon-play"></span>
+          <audio src="{{filename}}" ></audio>
+        </button>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  {{> footer}} <!-- Temporary: Until I can get the route.js layoutTemplate working -->
+</template>
 
 
 
@@ -57,7 +65,7 @@
       <span class="icon-bar"></span>
       </button>
       <div class="navbar-header">
-         <a class="navbar-brand" rel="home" href="#home" title="Speech Banana">
+         <a class="navbar-brand" rel="home" href="{{pathFor 'appBody'}}" title="Speech Banana">
          Speech Banana
          </a>
       </div>
@@ -71,7 +79,7 @@
       <!-- the collapsing menu -->
       <div class="collapse navbar-collapse navbar-left"  id="navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#home">Home</a></li>
+          <li class="active"><a href="{{pathFor 'appBody'}}">Home</a></li>
           <li><a href="#">About</a></li>
           {{> loginButtons}}
         </ul>

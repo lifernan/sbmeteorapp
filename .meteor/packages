@@ -16,3 +16,4 @@ accounts-base
 sb-accounts-ui-bootstrap-3
 sb-accounts-password
 mikowals:batch-insert
+iron:router
