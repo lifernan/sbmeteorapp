@@ -38,7 +38,14 @@
 
   <div class="container main"> <!-- Temporary: Until I can get the route.js layoutTemplate working -->
 
-    <div class="btn-group" role="group" aria-label="...">
+    <form role="form">
+      <div class="radio">
+        <label><input type="radio" id="male" name="optradio" checked={{isChecked}} />Male</label>
+        <label><input type="radio" id="female" name="optradio" checked={{isChecked}} />Female</label>
+      </div>
+    </form>
+
+    <div class="btn-group" role="group">
       {{#each sets}}
       <button type="button" class="word-set {{activeSet}} btn btn-default">{{title}}</button>
       {{/each}}
@@ -50,7 +57,7 @@
     {{#if activeQuiz}}
       {{> quiz}}
     {{else}}
-      <div class="btn-group" role="group" aria-label="...">
+      <div class="btn-group" role="group">
         {{#each groups}}
         <button type="button" class="word-group {{activeGroup}} btn btn-default">{{group}}</button>
         {{/each}}
@@ -83,7 +90,7 @@
     <audio src="{{filename}}" ></audio>
   </button>
   {{/each}}
-  
+
   <br>
   <form class="user-guess" role="form">
     <input type="text" name="text" class="form-control" placeholder="Enter sentence." />
