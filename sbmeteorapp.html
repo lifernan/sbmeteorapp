@@ -3,118 +3,114 @@
   <link rel="stylesheet" href="css/sbmeteorapp.css">
 </head>
 
-<template name="appBody">
+<template name="layout">
   {{> navigationBar}}
+  <div class="container main">
+    {{> yield}}
+  </div>
+  <!-- {{> footer}} -->
+</template>
 
+<template name="appBody">
   {{#if currentUser}}
     {{> lessonShow}}
   {{else}}
     {{> welcomePage}}
   {{/if}}
-    
-  {{> footer}}
 </template>
 
 <template name="welcomePage">
-  <div class="container main welcomePage">
     Welcome stranger!
-  </div>
 </template>
 
 <template name="lessonShow">
-  <div class="container main">
-    {{#each lessons}}
-    <p>
-      <a href="{{pathFor 'wordSetShow'}}">
-        <button class='lesson btn btn-default'>{{_id}}: {{lesson_title}}</button>
-      </a>
-    </p>
-    {{/each}}
-  </div>
+  {{#each lessons}}
+  <p>
+    <a href="{{pathFor 'wordSetShow'}}">
+      <button class='lesson btn btn-default'>{{_id}}: {{lesson_title}}</button>
+    </a>
+  </p>
+  {{/each}}
  </template>
 
 <template name="wordSetShow">
-  {{> navigationBar}}  <!-- Temporary: Until I can get the route.js layoutTemplate working -->
 
-  <div class="container main"> <!-- Temporary: Until I can get the route.js layoutTemplate working -->
+  <form role="form">
+    <div class="radio">
+      <label><input type="radio" id="male" name="optradio" checked={{isChecked 'm'}} />Male</label>
+      <label><input type="radio" id="female" name="optradio" checked={{isChecked 'f'}} />Female</label>
+    </div>
+  </form>
 
-    <form role="form">
-      <div class="radio">
-        <label><input type="radio" id="male" name="optradio" checked={{isChecked 'm'}} />Male</label>
-        <label><input type="radio" id="female" name="optradio" checked={{isChecked 'f'}} />Female</label>
-      </div>
-    </form>
+  <div class="btn-group" role="group">
+    {{#each sets}}
+    <button type="button" class="word-set {{activeSet}} btn btn-default">{{title}}</button>
+    {{/each}}
+  </div>
+  <button type="button" class="quiz {{activeQuiz}} btn btn-default">Quiz</button>
+  <br>
+  <br>
+
+  {{#if activeQuiz}}
+    {{> quiz}}
+  {{else}}
 
     <div class="btn-group" role="group">
-      {{#each sets}}
-      <button type="button" class="word-set {{activeSet}} btn btn-default">{{title}}</button>
+      {{#each groups}}
+      <button type="button" class="word-group {{activeGroup}} btn btn-default">{{group}}</button>
       {{/each}}
     </div>
-    <button type="button" class="quiz {{activeQuiz}} btn btn-default">Quiz</button>
-    <br>
     <br>
 
-    {{#if activeQuiz}}
-      {{> quiz}}
-    {{else}}
-      <div class="btn-group" role="group">
-        {{#each groups}}
-        <button type="button" class="word-group {{activeGroup}} btn btn-default">{{group}}</button>
-        {{/each}}
-      </div>
-      <br>
+    <ul>
+      {{#each words}}
+      <li>
+        <button class="audio btn btn-default">
+          {{word}}
+          <span class="glyphicon glyphicon-play"></span>
+          <audio src="{{filename}}" ></audio>
+        </button>
+      </li>
+      {{/each}}
+    </ul>
 
-      <ul>
-        {{#each words}}
-        <li>
-          <button class="audio btn btn-default">
-            {{word}}
-            <span class="glyphicon glyphicon-play"></span>
-            <audio src="{{filename}}" ></audio>
-          </button>
-        </li>
-        {{/each}}
-      </ul>
-    {{/if}}
+  {{/if}}
 
-  </div>
-    
-  <!--{{> footer}} Temporary: Until I can get the route.js layoutTemplate working -->
 </template>
 
 <template name="quiz">
-  {{#each sentences}}
+  {{#with sentence}}
   <button class="audio btn btn-default">
-    {{sentence}}
+    {{sentence.sentence}}
     <span class="glyphicon glyphicon-play"></span>
-    <audio src="{{filename}}" ></audio>
+    <audio src="{{sentence.filename}}" ></audio>
   </button>
-  {{/each}}
-
+  {{/with}}
   <br>
-  <form class="user-guess" role="form">
-    <input type="text" name="text" class="form-control" placeholder="Enter sentence." />
-    <input type="submit" value="submit" class="btn btn-default" />
+
+  <form role="form" class="user-guess">
+    <div class="row">
+      <div class="form-group col-lg-6">
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button type="submit" value="submit" class="btn btn-default">Check</button>
+          </span>
+          <input type="text" name="text" class="form-control" placeholder="Type what you hear.">
+        </div><!-- /input-group -->
+      </div>
+    </div>
   </form>
 
-  <br>
-  <button class="quiz-next btn btn-default">Next</button> <!-- Will eventually combine with submit button-->
+  <button class="quiz-next btn btn-default">Continue</button> 
+
 </template>
 
 <template name="about">
-  {{> navigationBar}}  <!-- Temporary: Until I can get the route.js layoutTemplate working -->
-  <div class="container main"> <!-- Temporary: Until I can get the route.js layoutTemplate working -->
   About! Summary of what app does and how to use it
-  </div>
-  {{> footer}} <!-- Temporary: Until I can get the route.js layoutTemplate working -->
 </template>
 
 <template name="progress">
-  {{> navigationBar}}  <!-- Temporary: Until I can get the route.js layoutTemplate working -->
-  <div class="container main"> <!-- Temporary: Until I can get the route.js layoutTemplate working -->
   Progress: graphs of data from sentence tests
-  </div>
-  {{> footer}} <!-- Temporary: Until I can get the route.js layoutTemplate working -->
 </template>
 
 <template name="navigationBar">
