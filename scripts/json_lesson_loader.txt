@@ -1,154 +1,154 @@
 [
     {
-        "lesson_title": "Objects and Colors", 
-        "_id": "1"
+        "number": 1, 
+        "title": "Objects and Colors"
     }, 
     {
-        "lesson_title": "Objects and Associated Verbs", 
-        "_id": "2"
+        "number": 2, 
+        "title": "Objects and Associated Verbs"
     }, 
     {
-        "lesson_title": "Numbers", 
-        "_id": "3"
+        "number": 3, 
+        "title": "Numbers"
     }, 
     {
-        "lesson_title": "Opposites and Conversational Phrases", 
-        "_id": "4"
+        "number": 4, 
+        "title": "Opposites and Conversational Phrases"
     }, 
     {
-        "lesson_title": "Words that Begin a Question", 
-        "_id": "5"
+        "number": 5, 
+        "title": "Words that Begin a Question"
     }, 
     {
-        "lesson_title": "Sound of a as in father and o as in hot", 
-        "_id": "6"
+        "number": 6, 
+        "title": "Sound of a as in father and o as in hot"
     }, 
     {
-        "lesson_title": "Sound of o, as in home", 
-        "_id": "7"
+        "number": 7, 
+        "title": "Sound of o, as in home"
     }, 
     {
-        "lesson_title": "Sound of aw as in law", 
-        "_id": "8"
+        "number": 8, 
+        "title": "Sound of aw as in law"
     }, 
     {
-        "lesson_title": "Sound of u as in up", 
-        "_id": "9"
+        "number": 9, 
+        "title": "Sound of u as in up"
     }, 
     {
-        "lesson_title": "Sound of oo as in look", 
-        "_id": "10"
+        "number": 10, 
+        "title": "Sound of oo as in look"
     }, 
     {
-        "lesson_title": "Sound of oo as in moon", 
-        "_id": "11"
+        "number": 11, 
+        "title": "Sound of oo as in moon"
     }, 
     {
-        "lesson_title": "Sound of a as in gate", 
-        "_id": "12"
+        "number": 12, 
+        "title": "Sound of a as in gate"
     }, 
     {
-        "lesson_title": "Sound of e as in see", 
-        "_id": "13"
+        "number": 13, 
+        "title": "Sound of e as in see"
     }, 
     {
-        "lesson_title": "Sound of er as in berth", 
-        "_id": "14"
+        "number": 14, 
+        "title": "Sound of er as in berth"
     }, 
     {
-        "lesson_title": "Sound of a as in cat", 
-        "_id": "15"
+        "number": 15, 
+        "title": "Sound of a as in cat"
     }, 
     {
-        "lesson_title": "Sound of i as in it", 
-        "_id": "16"
+        "number": 16, 
+        "title": "Sound of i as in it"
     }, 
     {
-        "lesson_title": "Sound of e as in met", 
-        "_id": "17"
+        "number": 17, 
+        "title": "Sound of e as in met"
     }, 
     {
-        "lesson_title": "Sound of i as in five", 
-        "_id": "18"
+        "number": 18, 
+        "title": "Sound of i as in five"
     }, 
     {
-        "lesson_title": "Sound of ou as in out", 
-        "_id": "19"
+        "number": 19, 
+        "title": "Sound of ou as in out"
     }, 
     {
-        "lesson_title": "Sound of u as in huge", 
-        "_id": "20"
+        "number": 20, 
+        "title": "Sound of u as in huge"
     }, 
     {
-        "lesson_title": "Sound of oi as in boil", 
-        "_id": "21"
+        "number": 21, 
+        "title": "Sound of oi as in boil"
     }, 
     {
-        "lesson_title": "Sound of b as in bay, and p as in pay", 
-        "_id": "22"
+        "number": 22, 
+        "title": "Sound of b as in bay, and p as in pay"
     }, 
     {
-        "lesson_title": "Sound of l as in lake", 
-        "_id": "23"
+        "number": 23, 
+        "title": "Sound of l as in lake"
     }, 
     {
-        "lesson_title": "Sound of w as in way, and wh as in white", 
-        "_id": "24"
+        "number": 24, 
+        "title": "Sound of w as in way, and wh as in white"
     }, 
     {
-        "lesson_title": "Sound of m as in my", 
-        "_id": "25"
+        "number": 25, 
+        "title": "Sound of m as in my"
     }, 
     {
-        "lesson_title": "Sound of r as in rabbit", 
-        "_id": "26"
+        "number": 26, 
+        "title": "Sound of r as in rabbit"
     }, 
     {
-        "lesson_title": "Sound of d as in den, and t as in ten", 
-        "_id": "27"
+        "number": 27, 
+        "title": "Sound of d as in den, and t as in ten"
     }, 
     {
-        "lesson_title": "Sound of v as in vine, and f as in fine", 
-        "_id": "28"
+        "number": 28, 
+        "title": "Sound of v as in vine, and f as in fine"
     }, 
     {
-        "lesson_title": "Sound of j or soft g as in jell or ginger", 
-        "_id": "29"
+        "number": 29, 
+        "title": "Sound of j or soft g as in jell or ginger"
     }, 
     {
-        "lesson_title": "Sound of th as in that, and th as in think", 
-        "_id": "30"
+        "number": 30, 
+        "title": "Sound of th as in that, and th as in think"
     }, 
     {
-        "lesson_title": "Sound of n as in no", 
-        "_id": "31"
+        "number": 31, 
+        "title": "Sound of n as in no"
     }, 
     {
-        "lesson_title": "Sound of z as in zebra, and s or soft c as in sand or cent", 
-        "_id": "32"
+        "number": 32, 
+        "title": "Sound of z as in zebra, and s or soft c as in sand or cent"
     }, 
     {
-        "lesson_title": "Sound of sh as in ship, and ch as in chip", 
-        "_id": "33"
+        "number": 33, 
+        "title": "Sound of sh as in ship, and ch as in chip"
     }, 
     {
-        "lesson_title": "Sound of g as in get", 
-        "_id": "34"
+        "number": 34, 
+        "title": "Sound of g as in get"
     }, 
     {
-        "lesson_title": "Sound of k or hard c as in kite or cake", 
-        "_id": "35"
+        "number": 35, 
+        "title": "Sound of k or hard c as in kite or cake"
     }, 
     {
-        "lesson_title": "Sound of h as in heaven", 
-        "_id": "36"
+        "number": 36, 
+        "title": "Sound of h as in heaven"
     }, 
     {
-        "lesson_title": "Sound of y as in yes", 
-        "_id": "37"
+        "number": 37, 
+        "title": "Sound of y as in yes"
     }, 
     {
-        "lesson_title": "Sound of ng as in king", 
-        "_id": "38"
+        "number": 38, 
+        "title": "Sound of ng as in king"
     }
 ]

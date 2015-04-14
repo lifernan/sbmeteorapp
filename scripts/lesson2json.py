@@ -53,24 +53,24 @@ for lesson in lessons:
 	lesson = sets.pop(0).split("\n") # first 'set' actually describes lesson overall
 
 	lesson_input = lesson[0].split(" ") # input has form: lesson# var1 val1 ... varN valn
-	lesson_number = lesson_input[0] # int(lesson_input[0])
+	lesson_number = int(lesson_input[0])
 
 	# 0 = word groupings will not be randomized, else = size of each randomly selected lesson set
 	random_group = lesson_input[lesson_input.index('random')+1] if 'random' in lesson_input else 0
 
 	lesson_title = lesson[1]
-	all_lessons.append({'_id': lesson_number, 'lesson_title': lesson_title})
+	all_lessons.append({'number': lesson_number, 'title': lesson_title})
 
 	for set_number, set in enumerate(sets):
 
-		set_number = str(set_number + 1)
+		set_number = set_number + 1
 		lines = set.split("\n")
 		set_title = lines.pop(0)
 		all_sets.append({'lesson': lesson_number, 'set': set_number, 'title': set_title})
 
 		for group_number, group in enumerate(lines):
 
-			group_number = str(group_number + 1)
+			group_number = group_number + 1
 			all_groups.append({'lesson': lesson_number, 'set': set_number, 'group': group_number})
 
 			for word in group.split(", "):
@@ -78,7 +78,7 @@ for lesson in lessons:
 
 					filename = join(path, word.replace(" ", "_") + '_' + gender + extension)
 					if not isfile(filename): 
-						missing_words.write(filename + ' ' + lesson_number + ' ' + set_number + ' ' + group_number + '\n')
+						missing_words.write(filename + ' ' + str(lesson_number) + ' ' + str(set_number) + ' ' + str(group_number) + '\n')
 						continue
 					
 					filename = filename.split('public/')[1]

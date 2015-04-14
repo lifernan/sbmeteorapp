@@ -20,7 +20,7 @@ all_sentences = []
 
 lessons = [d for d in listdir(path) if not isfile(d)]
 for lesson in lessons:
-	lesson_number = lesson.split("_")[1]
+	lesson_number = int(lesson.split("_")[1])
 	lesson_path = join(path, lesson)
 	sentences = [s for s in listdir(lesson_path) if extension in s]
 	lesson_path = lesson_path.split('public/')[1]
