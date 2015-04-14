@@ -93,9 +93,9 @@
       <div class="form-group col-lg-6">
         <div class="input-group">
           <span class="input-group-btn">
-            <button type="submit" value="submit" class="btn btn-default">Check</button>
+            <button type="submit" value="submit" class="user-guess btn btn-default" {{activeQuizSubmit}}>Check</button>
           </span>
-          <input type="text" name="text" class="form-control" placeholder="Type what you hear.">
+          <input type="text" name="text" class="user-guess form-control" placeholder="Type what you hear.">
         </div><!-- /input-group -->
       </div>
     </div>
@@ -111,6 +111,9 @@
 
 <template name="progress">
   Progress: graphs of data from sentence tests
+  {{#each scores}}
+    <p>{{quiz}}: {{total_correct}} / {{total_taken}}</p>
+  {{/each}}
 </template>
 
 <template name="navigationBar">

@@ -1,7 +1,3 @@
-Router.configure({
- 	layoutTemplate: 'layout'
- });
-
 Router.map(function () {
 	this.route('appBody', {
 		path: '/',
@@ -10,10 +6,12 @@ Router.map(function () {
 	});
 	this.route('wordSetShow', {
 		path: '/wordSet/',
+		template: 'wordSetShow',
+		layoutTemplate: 'layout',
 		action: function () {
 			this.render();
 		}
 	});
-	this.route('about', {path: '/about/'});
-	this.route('progress', {path: '/progress/'});
+	this.route('about', {path: '/about/', layoutTemplate: 'layout'});
+	this.route('progress', {path: '/progress/', layoutTemplate: 'layout'});
 });

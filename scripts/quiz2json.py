@@ -29,6 +29,7 @@ for lesson in lessons:
 		sentence = sentence_filename.split(".")[0].replace("_", " ")
 		gender = sentence[-1]
 		sentence = sentence[:-2]
+		sentence = sentence[:-2] + '?' if (sentence[-2:] == ' q') else sentence + '.'
 
 		all_sentences.append({'quiz': lesson_number, 'gender': gender, 'sentence': sentence, \
 		  'filename': join(lesson_path, sentence_filename)})
