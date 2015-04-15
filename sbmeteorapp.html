@@ -27,7 +27,7 @@
   {{#each lessons}}
   <p>
     <a href="{{pathFor 'wordSetShow'}}">
-      <button class='lesson btn btn-default'>{{_id}}: {{lesson_title}}</button>
+      <button class='lesson btn btn-default'>{{number}}: {{title}}</button>
     </a>
   </p>
   {{/each}}
@@ -79,6 +79,18 @@
 </template>
 
 <template name="quiz">
+  <p>
+    Current Score: {{totalCorrect}} / {{totalTaken}}
+    <br>
+    {{#if submitted}}
+      {{#if newScore}}
+        Good job! You got the whole sentence right :)
+      {{else}}
+        Not quite!
+      {{/if}}
+    {{/if}}
+  </p>
+
   {{#with sentence}}
   <button class="audio btn btn-default">
     {{sentence.sentence}}
