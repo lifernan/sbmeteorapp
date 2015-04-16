@@ -107,7 +107,7 @@ if (Meteor.isClient) {
       Session.set('r', r);
     },
     'click button.audio': function() { // hack (the audio object should be created on load of the page, not at event)
-      var audio = new Audio(this.filename); // error to fix: sentences ending in ? marks cannot play female voice
+      var audio = new Audio(this.url); // error to fix: sentences ending in ? marks cannot play female voice
       audio.play();
     }
     

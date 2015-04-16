@@ -9,11 +9,8 @@ autopublish
 insecure
 twbs:bootstrap
 email
-npm-bcrypt
-sha
-srp
-accounts-base
 sb-accounts-ui-bootstrap-3
 sb-accounts-password
 mikowals:batch-insert
 iron:router
+accounts-base

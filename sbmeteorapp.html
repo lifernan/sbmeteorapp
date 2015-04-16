@@ -68,7 +68,7 @@
         <button class="audio btn btn-default">
           {{word}}
           <span class="glyphicon glyphicon-play"></span>
-          <audio src="{{filename}}" ></audio>
+          <audio src="{{url}}" ></audio>
         </button>
       </li>
       {{/each}}
@@ -95,7 +95,7 @@
   <button class="audio btn btn-default">
     {{sentence.sentence}}
     <span class="glyphicon glyphicon-play"></span>
-    <audio src="{{sentence.filename}}" ></audio>
+    <audio src="{{sentence.url}}" ></audio>
   </button>
   {{/with}}
   <br>
