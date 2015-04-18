@@ -62,14 +62,19 @@
     </div>
     <br>
 
-    <ul>
+    <ul class="list-inline">
       {{#each words}}
       <li>
-        <button class="audio btn btn-default">
-          {{word}}
-          <span class="glyphicon glyphicon-play"></span>
+        <button class="audio btn btn-word">
+          <h4>
+            {{word}}
+            <span class="glyphicon glyphicon-play-circle"></span>
+          </h4>
+          
+          
           <audio src="{{url}}" ></audio>
         </button>
+
       </li>
       {{/each}}
     </ul>

@@ -126,6 +126,32 @@ p a:hover, p a:active,
   padding-bottom: 4em;
 }
 
+/* Play word button */
 
+ul { /* also works with ol */
+    width: 100%; /* or your desired width */
+    text-align: center; /* this will center the list items */
+}
 
+.btn-word {
+  background-color: #FFFCF6;
+  border: solid 2px black;
+  /*border-radius: 0;  sharp corners */
+  width: 11em;
+  height: 5.5em;
+  margin-bottom: 0.5em;
+}
 
+/* custom icons */
+
+[class^="icon-custom-"],
+[class*=" icon-custom-"] {
+    background-image: url("img/icons.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.icon-custom-logo { background-position : -550px -690px; width : 120px; height : 120px;  }
+.icon-custom-intheoffice { background-position: -395px -60px; width: 24px; height: 24px  } 
+.icon-custom-edit { background-position: -765px -201px; width: 24px; height: 29px  } 
+.icon-custom-play-word { background-position: -764px -176px; width: 25px; height: 25px  } 
