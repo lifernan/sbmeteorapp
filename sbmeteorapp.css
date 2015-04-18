@@ -139,7 +139,23 @@ ul { /* also works with ol */
   /*border-radius: 0;  sharp corners */
   width: 11em;
   height: 5.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
+
+  /* add shadow */
+  -webkit-box-shadow: 0.2em 0.3em 0 rgba(4, 4, 4, 0.3);
+  -moz-box-shadow:    0.2em 0.3em 0 rgba(4, 4, 4, 0.3);
+  box-shadow:         0.2em 0.3em 0 rgba(4, 4, 4, 0.3);
+}
+
+.btn-word:active {
+  margin-top: 0.3em;
+  margin-bottom: 0.7em;
+  margin-left: 0.2em;
+  margin-right: -0.2em;
+}
+
+.btn-word:focus, .btn-word:active:focus {
+  outline: none;
 }
 
 /* custom icons */
