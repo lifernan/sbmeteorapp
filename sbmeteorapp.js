@@ -9,14 +9,14 @@ if (Meteor.isClient) {
   });
   Template.navigationBar.events({
     'click #brand': function () {
-      Session.set('currentNav','brand');
+      Session.setAuth('currentNav','brand');
     },
     'click #about': function () {
-      Session.set('currentNav','about');
+      Session.setAuth('currentNav','about');
       Router.go('about');
     },
     'click #progress': function () {
-      Session.set('currentNav','progress');
+      Session.setAuth('currentNav','progress');
       Router.go('progress');
     }
   });
@@ -31,14 +31,31 @@ if (Meteor.isClient) {
   });
 
   Template.lessonShow.events({
-    'click button.lesson': function () {
-      Session.set('currentLesson', this.number);
-      Session.set('currentSet', 1);
-      Session.set('currentGroup', 1);
-      Session.set('currentGender',"f");
+    'click button.btn-lesson': function () {
+      Session.setAuth('currentLesson', this.number);
+      Session.setAuth('currentSet', 1);
+      Session.setAuth('currentGroup', 1);
+      Session.setAuth('currentGender',"f");
 
-      Session.set('currentQuiz', 0);
+      Session.setAuth('currentQuiz', 0);
       Router.go('wordSetShow');
+    }
+  });
+
+  Template.playMenu.helpers({
+    checkedGender: function(gender) {
+      if (Session.get('currentGender') === gender) {
+        return 'checked';
+      }
+    }
+  });
+
+  Template.playMenu.events({
+    'change #male': function() {
+      Session.setAuth('currentGender', 'm');
+    },
+    'change #female': function() {
+      Session.setAuth('currentGender', 'f');
     }
   });
 
@@ -53,13 +70,28 @@ if (Meteor.isClient) {
       return WordsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet'), group: Session.get('currentGroup'), gender: Session.get('currentGender')});
     },
     activeSet: function() {
-      if (Session.get('currentSet') === SetsList.find(this._id).fetch()[0].set) {
+      if (Session.get('currentSet') === SetsList.findOne(this._id).set) {
         return 'active';
       }
     },
     activeGroup: function() {
-      if (Session.get('currentGroup') === GroupsList.find(this._id).fetch()[0].group) {
+      if (Session.get('currentGroup') === GroupsList.findOne(this._id).group) {
         return 'active';
+      }
+    },
+    hideGroupMenu: function() {
+      if (GroupsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet')}).count() === 1) {
+        return 'hidden';
+      }
+    },
+    hidePreviousGroupArrow: function() {
+      if (Session.get('currentGroup') === 1) {
+        return 'hidden';
+      }
+    },
+    hideNextGroupArrow: function() {
+      if (Session.get('currentGroup') === GroupsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet')}).count()) {
+        return 'hidden';
       }
     },
     activeQuiz: function() {
@@ -67,50 +99,52 @@ if (Meteor.isClient) {
         return 'active';
       }
     },
-    isChecked: function(gender) {
-      if (Session.get('currentGender') === gender) {
-        return 'checked';
+    lessonNumber: function() {
+      return Session.get('currentLesson');
+    },
+    lessonTitle: function() {
+      if (Session.get('currentLesson') !== 0) {
+        return LessonsList.findOne({number: Session.get('currentLesson')}).title;
       }
     }
   });
 
   Template.wordSetShow.events({
-    'change #male': function() {
-      Session.set('currentGender', 'm');
-    },
-    'change #female': function() {
-      Session.set('currentGender', 'f');
-    },
     'click button.word-set': function() {
       var setID = this._id;
-      var setName = SetsList.find(setID).fetch()[0].set;
-      Session.set('currentSet', setName);
-      Session.set('currentGroup', 1);
-      Session.set('currentQuiz', 0); // hack (uses 0 value to hide content, inefficient and roundabout)
+      var setName = SetsList.findOne(setID).set;
+      Session.setAuth('currentSet', setName);
+      Session.setAuth('currentGroup', 1);
+      Session.setAuth('currentQuiz', 0); // hack (uses 0 value to hide content, inefficient and roundabout)
     },
-    'click button.word-group': function() {
+    'click button.btn-word-group': function() {
       var groupID = this._id;
-      var groupName = GroupsList.find(groupID).fetch()[0].group;
-      Session.set('currentGroup', groupName);
+      var groupNumber = GroupsList.findOne(groupID).group;
+      Session.setAuth('currentGroup', groupNumber);
     },
     'click button.quiz': function() {
-      Session.set('currentSet', 0);  // hack (roundabout way to make sets and groups lists inactive during quiz)
-      Session.set('currentGroup', 0);
+      Session.setAuth('currentSet', 0);  // hack (roundabout way to make sets and groups lists inactive during quiz)
+      Session.setAuth('currentGroup', 0);
 
-      Session.set('currentQuiz', Session.get('currentLesson'));
-      Session.set('submitted', false);
-      Session.set('currentTotalCorrect', 0);
-      Session.set('currentTotalTaken', 0);
+      Session.setAuth('currentQuiz', Session.get('currentLesson'));
+      Session.setAuth('submitted', false);
+      Session.setAuth('currentTotalCorrect', 0);
+      Session.setAuth('currentTotalTaken', 0);
 
       var sentences = SentencesList.find({quiz: Session.get('currentQuiz'), gender: Session.get('currentGender')});
       var r = Math.floor(Math.random() * sentences.count()); 
-      Session.set('r', r);
+      Session.setAuth('r', r);
     },
     'click button.audio': function() { // hack (the audio object should be created on load of the page, not at event)
       var audio = new Audio(this.url); // error to fix: sentences ending in ? marks cannot play female voice
       audio.play();
+    },
+    'click button.previous-word-group': function() {
+      Session.setAuth('currentGroup', Session.get('currentGroup') - 1);
+    },
+    'click button.next-word-group': function() {
+      Session.setAuth('currentGroup', Session.get('currentGroup') + 1);
     }
-    
   });
 
   Template.quiz.helpers({
@@ -141,8 +175,8 @@ if (Meteor.isClient) {
     'click button.quiz-next': function() {
       var sentences = SentencesList.find({quiz: Session.get('currentQuiz'), gender: Session.get('currentGender')}); // need to store ids to avoid querying all the time
       var r = Math.floor(Math.random() * sentences.count());
-      Session.set('r', r);
-      Session.set('submitted', false);
+      Session.setAuth('r', r);
+      Session.setAuth('submitted', false);
     },
     'submit .user-guess': function(event) { // to do: Will need to change this to check phonemic spelling
       var guess = event.target.text.value;
@@ -160,12 +194,12 @@ if (Meteor.isClient) {
           ScoresList.insert({user: Meteor.userId(), quiz: Session.get('currentQuiz'), total_correct: newScore, total_taken: 1});
         }
 
-        Session.set('newScore', newScore);
-        Session.set('currentTotalCorrect', Session.get('currentTotalCorrect') + newScore);
-        Session.set('currentTotalTaken', Session.get('currentTotalTaken') + 1);
+        Session.setAuth('newScore', newScore);
+        Session.setAuth('currentTotalCorrect', Session.get('currentTotalCorrect') + newScore);
+        Session.setAuth('currentTotalTaken', Session.get('currentTotalTaken') + 1);
 
-        Session.set('submitted', true); // total hack, need to change
-        Session.set('actualSentenceID', sentences.fetch()[Session.get('r')]._id);
+        Session.setAuth('submitted', true); // total hack, need to change
+        Session.setAuth('actualSentenceID', sentences.fetch()[Session.get('r')]._id);
       }
 
       return false; // Prevent default form submit

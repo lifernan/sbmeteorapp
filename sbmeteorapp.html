@@ -1,7 +1,9 @@
 <head>
   <title>Speech Banana</title>
+  <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/sbmeteorapp.css">
 </head>
+
 
 <template name="layout">
   {{> navigationBar}}
@@ -11,6 +13,7 @@
   <!-- {{> footer}} -->
 </template>
 
+
 <template name="appBody">
   {{#if currentUser}}
     {{> lessonShow}}
@@ -19,28 +22,61 @@
   {{/if}}
 </template>
 
+
 <template name="welcomePage">
     Welcome stranger!
 </template>
+
 
 <template name="lessonShow">
   {{#each lessons}}
   <p>
     <a href="{{pathFor 'wordSetShow'}}">
-      <button class='lesson btn btn-default'>{{number}}: {{title}}</button>
+      <button class='btn btn-default btn-lesson'>{{number}}: {{title}}</button>
     </a>
   </p>
   {{/each}}
  </template>
 
+
+<template name="playMenu">
+  <button type="button" class="btn sound-menu" data-toggle="modal" data-target="#playMenu">
+    <h2><span class="glyphicon glyphicon-cog"></span></h2>
+  </button>
+
+  <div class="modal fade" id="playMenu" tabindex="-1" role="dialog" aria-labelledby="playMenu" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 class="modal-title" id="myModalLabel">Sound Settings</h3>
+        </div>
+
+        <div class="modal-body">
+          <h3>Voice Gender</h3>
+          <form role="form">
+            <div class="radio">
+              <label><input type="radio" id="male" name="optradio" checked={{checkedGender'm'}} />Male</label>
+              <label><input type="radio" id="female" name="optradio" checked={{checkedGender 'f'}} />Female</label>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</template>
+
+
 <template name="wordSetShow">
 
-  <form role="form">
-    <div class="radio">
-      <label><input type="radio" id="male" name="optradio" checked={{isChecked 'm'}} />Male</label>
-      <label><input type="radio" id="female" name="optradio" checked={{isChecked 'f'}} />Female</label>
-    </div>
-  </form>
+  <h4>Lesson {{lessonNumber}}: {{lessonTitle}}</h4>
+  <hr>
 
   <div class="btn-group" role="group">
     {{#each sets}}
@@ -55,33 +91,58 @@
     {{> quiz}}
   {{else}}
 
-    <div class="btn-group" role="group">
-      {{#each groups}}
-      <button type="button" class="word-group {{activeGroup}} btn btn-default">{{group}}</button>
-      {{/each}}
-    </div>
-    <br>
-
-    <ul class="list-inline">
+    <ul class="list-inline ul-word">
       {{#each words}}
-      <li>
+      <li class="li-word">
         <button class="audio btn btn-word">
           <h4>
             {{word}}
             <span class="glyphicon glyphicon-play-circle"></span>
           </h4>
-          
-          
           <audio src="{{url}}" ></audio>
         </button>
-
       </li>
       {{/each}}
     </ul>
 
-  {{/if}}
+    <ul class="list-inline group-menu">
+    </ul>
 
+    <div class="row group-menu">
+      <div style="visibility: {{hidePreviousGroupArrow}};">
+
+        <button type="button" class="btn previous-word-group pull-left">
+          <h2><span class="glyphicon glyphicon-menu-left"></span></h2>
+        </button>
+
+      </div>
+      <div class="text-center"> <!-- style="visibility: {{hideGroupMenu}};"> -->
+
+        <!--
+        <ul class="list-inline word-group">
+          {{#each groups}}
+          <li>
+            <button type="button" class="btn btn-default btn-word-group {{activeGroup}}" style="outline: none;">{{group}}</button>
+          </li>
+          {{/each}}
+        </ul>
+        -->
+
+        {{> playMenu}}
+
+      </div>
+      <div style="visibility: {{hideNextGroupArrow}};">
+
+        <button type="button" class="btn next-word-group pull-right">
+          <h2><span class="glyphicon glyphicon-menu-right"></span></h2>
+        </button>
+
+      </div>
+    </div>
+
+  {{/if}}
 </template>
+
 
 <template name="quiz">
   <p>
@@ -119,12 +180,13 @@
   </form>
 
   <button class="quiz-next btn btn-default">Continue</button> 
-
 </template>
+
 
 <template name="about">
   About! Summary of what app does and how to use it
 </template>
+
 
 <template name="progress">
   Progress: graphs of data from sentence tests
@@ -132,6 +194,7 @@
     <p>{{quiz}}: {{total_correct}} / {{total_taken}}</p>
   {{/each}}
 </template>
+
 
 <template name="navigationBar">
   <nav class="navbar navbar-default navbar-top" role="navigation" id="home">
@@ -169,6 +232,7 @@
     <!--/.container -->
   </nav>
 </template>
+
 
 <template name="footer">
   <div class="navbar navbar-default navbar-fixed-bottom">

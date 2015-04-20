@@ -2,14 +2,21 @@ Router.map(function () {
 	this.route('appBody', {
 		path: '/',
 		template: 'appBody',
-		layoutTemplate: 'layout'
+		layoutTemplate: 'layout',
+		action: function () {
+			if (this.ready()) {
+				this.render();
+			}
+		}
 	});
 	this.route('wordSetShow', {
-		path: '/wordSet/',
+		path: '/wordSet/',  // :number would be restful
 		template: 'wordSetShow',
 		layoutTemplate: 'layout',
 		action: function () {
-			this.render();
+			if (this.ready()) {
+				this.render();
+			}
 		}
 	});
 	this.route('about', {path: '/about/', layoutTemplate: 'layout'});

@@ -7,10 +7,12 @@
 meteor-platform
 autopublish
 insecure
-twbs:bootstrap
 email
 sb-accounts-ui-bootstrap-3
 sb-accounts-password
 mikowals:batch-insert
 iron:router
 accounts-base
+jquery
+twbs:bootstrap
+u2622:persistent-session
