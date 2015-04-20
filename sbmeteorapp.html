@@ -39,51 +39,22 @@
  </template>
 
 
-<template name="playMenu">
-  <button type="button" class="btn sound-menu" data-toggle="modal" data-target="#playMenu">
-    <h2><span class="glyphicon glyphicon-cog"></span></h2>
-  </button>
-
-  <div class="modal fade" id="playMenu" tabindex="-1" role="dialog" aria-labelledby="playMenu" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h3 class="modal-title" id="myModalLabel">Sound Settings</h3>
-        </div>
-
-        <div class="modal-body">
-          <h3>Voice Gender</h3>
-          <form role="form">
-            <div class="radio">
-              <label><input type="radio" id="male" name="optradio" checked={{checkedGender'm'}} />Male</label>
-              <label><input type="radio" id="female" name="optradio" checked={{checkedGender 'f'}} />Female</label>
-            </div>
-          </form>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</template>
-
-
 <template name="wordSetShow">
 
   <h4>Lesson {{lessonNumber}}: {{lessonTitle}}</h4>
   <hr>
 
-  <div class="btn-group" role="group">
+  <ul class="nav nav-tabs">
     {{#each sets}}
-    <button type="button" class="word-set {{activeSet}} btn btn-default">{{title}}</button>
+    <li role="presentation" class="word-set {{activeSet}}">
+      <a href="#">{{title}}</a>
+    </li>
     {{/each}}
-  </div>
-  <button type="button" class="quiz {{activeQuiz}} btn btn-default">Quiz</button>
+    <li class="quiz {{activeQuiz}}">
+      <a href="#">Quiz</a>
+    </li>
+  </ul>
+ 
   <br>
   <br>
 
@@ -141,6 +112,40 @@
     </div>
 
   {{/if}}
+</template>
+
+
+<template name="playMenu">
+  <button type="button" class="btn sound-menu" data-toggle="modal" data-target="#playMenu">
+    <h2><span class="glyphicon glyphicon-cog"></span></h2>
+  </button>
+
+  <div class="modal fade" id="playMenu" tabindex="-1" role="dialog" aria-labelledby="playMenu" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 class="modal-title" id="myModalLabel">Sound Settings</h3>
+        </div>
+
+        <div class="modal-body">
+          <h3>Voice Gender</h3>
+          <form role="form">
+            <div class="radio">
+              <label><input type="radio" id="male" name="optradio" checked={{checkedGender'm'}} />Male</label>
+              <label><input type="radio" id="female" name="optradio" checked={{checkedGender 'f'}} />Female</label>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </template>
 
 

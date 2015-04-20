@@ -110,7 +110,7 @@ if (Meteor.isClient) {
   });
 
   Template.wordSetShow.events({
-    'click button.word-set': function() {
+    'click li.word-set': function() {
       var setID = this._id;
       var setName = SetsList.findOne(setID).set;
       Session.setAuth('currentSet', setName);
@@ -122,7 +122,7 @@ if (Meteor.isClient) {
       var groupNumber = GroupsList.findOne(groupID).group;
       Session.setAuth('currentGroup', groupNumber);
     },
-    'click button.quiz': function() {
+    'click li.quiz': function() {
       Session.setAuth('currentSet', 0);  // hack (roundabout way to make sets and groups lists inactive during quiz)
       Session.setAuth('currentGroup', 0);
 

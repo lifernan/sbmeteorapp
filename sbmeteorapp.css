@@ -136,13 +136,10 @@ p a:hover, p a:active,
 
 /* Play word button */
 
-ul { /* also works with ol */
+.ul-word  { /* also works with ol */
     width: 100%; /* or your desired width */
     text-align: center; /* this will center the list items */
-}
-
-.ul-word {
-  /*min-height: 18.25em;*/
+    /*min-height: 18.25em;*/
 }
 
 .li-word {
