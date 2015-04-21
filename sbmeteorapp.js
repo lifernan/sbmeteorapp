@@ -90,13 +90,18 @@ if (Meteor.isClient) {
       }
     },
     hidePreviousGroupArrow: function() {
-      if (Session.get('currentGroup') === 1) {
+      if (Session.get('currentGroup') < 2)  {
         return 'hidden';
       }
     },
     hideNextGroupArrow: function() {
       if (Session.get('currentGroup') === GroupsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet')}).count()) {
-        return 'hidden';
+        return 'none';
+      }
+    },
+    hideNextQuizArrow: function() {
+      if (Session.get('currentQuiz') === 0) {
+        return 'none';
       }
     },
     activeQuiz: function() {
@@ -140,7 +145,13 @@ if (Meteor.isClient) {
       var r = Math.floor(Math.random() * sentences.count()); 
       Session.setAuth('r', r);
     },
-    'click button.audio': function() { // hack (the audio object should be created on load of the page, not at event)
+    'click button.next-quiz': function() {
+      var sentences = SentencesList.find({quiz: Session.get('currentQuiz'), gender: Session.get('currentGender')}); // need to store ids to avoid querying all the time
+      var r = Math.floor(Math.random() * sentences.count());
+      Session.setAuth('r', r);
+      Session.setAuth('submitted', false);
+    },
+    'click .audio': function() { // hack (the audio object should be created on load of the page, not at event)
       var audio = new Audio(this.url); // error to fix: sentences ending in ? marks cannot play female voice
       audio.play();
     },
@@ -177,12 +188,6 @@ if (Meteor.isClient) {
   });
 
   Template.quiz.events({
-    'click button.quiz-next': function() {
-      var sentences = SentencesList.find({quiz: Session.get('currentQuiz'), gender: Session.get('currentGender')}); // need to store ids to avoid querying all the time
-      var r = Math.floor(Math.random() * sentences.count());
-      Session.setAuth('r', r);
-      Session.setAuth('submitted', false);
-    },
     'submit .user-guess': function(event) { // to do: Will need to change this to check phonemic spelling
       var guess = event.target.text.value;
 

@@ -171,10 +171,6 @@ p a:hover, p a:active,
   margin-right: -0.2em;
 }
 
-.btn:focus, .btn:active:focus {
-  outline: none;
-}
-
 .btn-word-group {
   border-radius: 24px;
 }
@@ -185,17 +181,53 @@ p a:hover, p a:active,
   border: #7F7FB3 solid 2px;
 }
 
-.group-menu {
+#accordion {
+  min-height: 30em;
+}
+
+/* Sound settings menu */
+
+.play-menu {
   background-image: linear-gradient(to bottom, #FDBA13 100%, #f8f8f8 100%);
   margin-bottom: 0.5em;
+}
+
+.play-menu > div > .btn {
+  background-color: transparent;
+  border: none;
+  color: #7F7FB3;
+}
+
+.btn-play-quiz {
+  font-size: 5em;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 100%;
+  padding-bottom: 0;
+  display: inline-block;
+  text-shadow: 0.02em 0.03em 0 black;
+}
+
+.btn-play-quiz:active {
+  -webkit-box-shadow: none;
+  box-shadow:         none;
+  text-shadow:        none;
+  margin-top: 0.03em;
+  margin-bottom: -0.03em;
+  margin-left: 0.02em;
+  margin-right: -0.02em;
+}
+
+.btn-play-quiz > span {
+  text-align: right;
+  vertical-align: middle;
 }
 
 .word-group {
   padding-top: 1.7em;
 }
 
-.previous-word-group, .next-word-group, .sound-menu {
-  background-color: transparent;
-  border: none;
-  color: #7F7FB3;
+.btn:focus, .btn:active:focus {
+  outline: none;
 }
+
