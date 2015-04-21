@@ -44,74 +44,89 @@
   <h4>Lesson {{lessonNumber}}: {{lessonTitle}}</h4>
   <hr>
 
-  <ul class="nav nav-tabs">
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+
     {{#each sets}}
-    <li role="presentation" class="word-set {{activeSet}}">
-      <a href="#">{{title}}</a>
-    </li>
-    {{/each}}
-    <li class="quiz {{activeQuiz}}">
-      <a href="#">Quiz</a>
-    </li>
-  </ul>
- 
-  <br>
-  <br>
-
-  {{#if activeQuiz}}
-    {{> quiz}}
-  {{else}}
-
-    <ul class="list-inline ul-word">
-      {{#each words}}
-      <li class="li-word">
-        <button class="audio btn btn-word">
-          <h4>
-            {{word}}
-            <span class="glyphicon glyphicon-play-circle"></span>
-          </h4>
-          <audio src="{{url}}" ></audio>
-        </button>
-      </li>
-      {{/each}}
-    </ul>
-
-    <ul class="list-inline group-menu">
-    </ul>
-
-    <div class="row group-menu">
-      <div class="col-xs-2" style="visibility: {{hidePreviousGroupArrow}};">
-
-        <button type="button" class="btn previous-word-group pull-left">
-          <h2><span class="glyphicon glyphicon-menu-left"></span></h2>
-        </button>
-
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading{{set}}">
+        <h4 class="panel-title">
+          <a class="collapsed word-set" data-toggle="collapse" data-parent="#accordion" href="#collapse{{set}}" aria-expanded="false" aria-controls="collapse{{set}}">
+            {{title}}
+          </a>
+        </h4>
       </div>
-      <div class="col-xs-8 text-center"> <!-- style="visibility: {{hideGroupMenu}};"> -->
+      <div id="collapse{{set}}" class="panel-collapse collapse {{isActiveSet}}" role="tabpanel" aria-labelledby="heading{{set}}">
+        <div class="panel-body">
 
-        <!--
-        <ul class="list-inline word-group">
-          {{#each groups}}
-          <li>
-            <button type="button" class="btn btn-default btn-word-group {{activeGroup}}" style="outline: none;">{{group}}</button>
-          </li>
-          {{/each}}
-        </ul>
-        -->
+          <ul class="list-inline ul-word">
+            {{#each words}}
+            <li class="li-word">
+              <button class="audio btn btn-word">
+                <h4>
+                  {{word}}
+                  <span class="glyphicon glyphicon-play-circle"></span>
+                </h4>
+                <audio src="{{url}}" ></audio>
+              </button>
+            </li>
+            {{/each}}
+          </ul>
 
-        {{> playMenu}}
+          <ul class="list-inline group-menu">
+          </ul>
 
-      </div>
-      <div class="col-xs-2" style="visibility: {{hideNextGroupArrow}};">
+          <div class="row group-menu">
+            <div class="col-xs-2" style="visibility: {{hidePreviousGroupArrow}};">
 
-        <button type="button" class="btn next-word-group pull-right">
-          <h2><span class="glyphicon glyphicon-menu-right"></span></h2>
-        </button>
+              <button type="button" class="btn previous-word-group pull-left">
+                <h2><span class="glyphicon glyphicon-menu-left"></span></h2>
+              </button>
 
+            </div>
+            <div class="col-xs-8 text-center"> <!-- style="visibility: {{hideGroupMenu}};"> -->
+
+              <!--
+              <ul class="list-inline word-group">
+                {{#each groups}}
+                <li>
+                  <button type="button" class="btn btn-default btn-word-group {{activeGroup}}" style="outline: none;">{{group}}</button>
+                </li>
+                {{/each}}
+              </ul>
+              -->
+
+              {{> playMenu}}
+
+            </div>
+            <div class="col-xs-2" style="visibility: {{hideNextGroupArrow}};">
+
+              <button type="button" class="btn next-word-group pull-right">
+                <h2><span class="glyphicon glyphicon-menu-right"></span></h2>
+              </button>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
+    {{/each}}
 
-  {{/if}}
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="quizPanel">
+        <h4 class="panel-title">
+          <a class="collapsed quiz" data-toggle="collapse" data-parent="#accordion" href="#collapseQuiz" aria-expanded="false" aria-controls="collapseQuiz">
+            Quiz
+          </a>
+        </h4>
+      </div>
+      <div id="collapseQuiz" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingQuiz">
+        <div class="panel-body">
+          {{> quiz}}
+        </div>
+      </div>
+    </div>
+  </div>
+ 
 </template>
 
 

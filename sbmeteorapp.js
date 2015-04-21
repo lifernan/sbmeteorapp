@@ -74,6 +74,11 @@ if (Meteor.isClient) {
         return 'active';
       }
     },
+    isActiveSet: function() {
+      if (Session.get('currentSet') === SetsList.findOne(this._id).set) {
+        return 'in';
+      }
+    },
     activeGroup: function() {
       if (Session.get('currentGroup') === GroupsList.findOne(this._id).group) {
         return 'active';
@@ -110,7 +115,7 @@ if (Meteor.isClient) {
   });
 
   Template.wordSetShow.events({
-    'click li.word-set': function() {
+    'click a.word-set': function() {
       var setID = this._id;
       var setName = SetsList.findOne(setID).set;
       Session.setAuth('currentSet', setName);
@@ -122,7 +127,7 @@ if (Meteor.isClient) {
       var groupNumber = GroupsList.findOne(groupID).group;
       Session.setAuth('currentGroup', groupNumber);
     },
-    'click li.quiz': function() {
+    'click a.quiz': function() {
       Session.setAuth('currentSet', 0);  // hack (roundabout way to make sets and groups lists inactive during quiz)
       Session.setAuth('currentGroup', 0);
 
