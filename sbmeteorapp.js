@@ -43,14 +43,50 @@ if (Meteor.isClient) {
   });
 
   Template.playMenu.helpers({
+    groups: function() {
+      return GroupsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet')});
+    },
+    hideGroupMenu: function() {
+      if (GroupsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet')}).count() === 1) {
+        return 'hidden';
+      }
+    },
+    hidePreviousGroupArrow: function() {
+      if (Session.get('currentGroup') < 2)  {
+        return 'hidden';
+      }
+    },
+    offsetHiddenPreviousArrow: function() {
+      if (Session.get('currentGroup') < 2)  {
+        return 'col-xs-offset-2'; /* horrible hack */
+      }
+    },
+    hideNextGroupArrow: function() {
+      if (Session.get('currentGroup') === GroupsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet')}).count()) {
+        return 'none';
+      }
+    },
+    hideNextQuizArrow: function() {
+      if (Session.get('currentQuiz') === 0) {
+        return 'none';
+      }
+    },
+    fixedForMobile: function() {
+      if (screen.height < 600) {
+        return 'navbar-fixed-bottom';
+      }
+    }
+  });
+
+  Template.playModal.helpers({
     checkedGender: function(gender) {
       if (Session.get('currentGender') === gender) {
         return 'checked';
       }
     }
-  });
+  }); 
 
-  Template.playMenu.events({
+  Template.playModal.events({
     'change #male': function() {
       Session.setAuth('currentGender', 'm');
     },
@@ -62,9 +98,6 @@ if (Meteor.isClient) {
   Template.wordSetShow.helpers({
     sets: function() {
       return SetsList.find({lesson: Session.get('currentLesson')});
-    },
-    groups: function() {
-      return GroupsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet')});
     },
     words: function() {
       return WordsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet'), group: Session.get('currentGroup'), gender: Session.get('currentGender')});
@@ -84,38 +117,13 @@ if (Meteor.isClient) {
         return 'active';
       }
     },
-    hideGroupMenu: function() {
-      if (GroupsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet')}).count() === 1) {
-        return 'hidden';
-      }
-    },
-    hidePreviousGroupArrow: function() {
-      if (Session.get('currentGroup') < 2)  {
-        return 'hidden';
-      }
-    },
-    hideNextGroupArrow: function() {
-      if (Session.get('currentGroup') === GroupsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet')}).count()) {
-        return 'none';
-      }
-    },
-    hideNextQuizArrow: function() {
-      if (Session.get('currentQuiz') === 0) {
-        return 'none';
-      }
-    },
     activeQuiz: function() {
       if (Session.get('currentQuiz') !== 0) {
         return 'active';
       }
     },
-    lessonNumber: function() {
-      return Session.get('currentLesson');
-    },
-    lessonTitle: function() {
-      if (Session.get('currentLesson') !== 0) {
-        return LessonsList.findOne({number: Session.get('currentLesson')}).title;
-      }
+    lesson: function() {
+      return LessonsList.findOne({number: Session.get('currentLesson')});
     }
   });
 

@@ -7,9 +7,9 @@
 
 <template name="layout">
   {{> navigationBar}}
-  <div class="container main">
-    {{> yield}}
-  </div>
+  
+  {{> yield}}
+  
   <!-- {{> footer}} -->
 </template>
 
@@ -18,7 +18,9 @@
   {{#if currentUser}}
     {{> lessonShow}}
   {{else}}
+    <div class="container main">
     {{> welcomePage}}
+    </div>
   {{/if}}
 </template>
 
@@ -29,158 +31,169 @@
 
 
 <template name="lessonShow">
-  {{#each lessons}}
-  <p>
-    <a href="{{pathFor 'wordSetShow'}}">
-      <button class='btn btn-default btn-lesson'>{{number}}: {{title}}</button>
-    </a>
-  </p>
-  {{/each}}
+  <div class="container main">
+    {{#each lessons}}
+    <p>
+      <button class='btn btn-default btn-lesson' onclick="{{pathFor 'wordSetShow'}}">{{number}}: {{title}}</button>
+    </p>
+    {{/each}}
+  </div>
  </template>
 
 
 <template name="wordSetShow">
-  <h3>Lesson {{lessonNumber}}: {{lessonTitle}}</h3>
-  <hr>
+  <div class="container word-show">
+    {{#with lesson}}
+    <h3>Lesson {{number}}: {{title}}</h3>
+    {{/with}}
+    <hr>
 
-  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
 
-    {{#each sets}}
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="heading{{set}}">
-        <h4 class="panel-title">
-          <a class="collapsed word-set" data-toggle="collapse" data-parent="#accordion" href="#collapse{{set}}" aria-expanded="false" aria-controls="collapse{{set}}">
-            {{title}}
-          </a>
-        </h4>
+      {{#each sets}}
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading{{set}}">
+          <h4 class="panel-title">
+            <a class="collapsed word-set" data-toggle="collapse" data-parent="#accordion" href="#collapse{{set}}" aria-expanded="false" aria-controls="collapse{{set}}">
+              {{title}}
+            </a>
+          </h4>
+        </div>
+        <div id="collapse{{set}}" class="panel-collapse collapse {{isActiveSet}}" role="tabpanel" aria-labelledby="heading{{set}}">
+          <div class="panel-body">
+
+            <ul class="list-inline ul-word">
+              {{#each words}}
+              <li class="li-word">
+                <button class="audio btn btn-word">
+                  <h4>
+                    {{word}}
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                  </h4>
+                  <audio src="{{url}}" ></audio>
+                </button>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
       </div>
-      <div id="collapse{{set}}" class="panel-collapse collapse {{isActiveSet}}" role="tabpanel" aria-labelledby="heading{{set}}">
-        <div class="panel-body">
+      {{/each}}
 
-          <ul class="list-inline ul-word">
-            {{#each words}}
-            <li class="li-word">
-              <button class="audio btn btn-word">
-                <h4>
-                  {{word}}
-                  <span class="glyphicon glyphicon-play-circle"></span>
-                </h4>
-                <audio src="{{url}}" ></audio>
-              </button>
-            </li>
-            {{/each}}
-          </ul>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="quizPanel">
+          <h4 class="panel-title">
+            <a class="collapsed quiz" data-toggle="collapse" data-parent="#accordion" href="#collapseQuiz" aria-expanded="false" aria-controls="collapseQuiz">
+              Quiz
+            </a>
+          </h4>
+        </div>
+        <div id="collapseQuiz" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingQuiz">
+          <div class="panel-body">
+            {{> quiz}}
+          </div>
         </div>
       </div>
     </div>
-    {{/each}}
-
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="quizPanel">
-        <h4 class="panel-title">
-          <a class="collapsed quiz" data-toggle="collapse" data-parent="#accordion" href="#collapseQuiz" aria-expanded="false" aria-controls="collapseQuiz">
-            Quiz
-          </a>
-        </h4>
-      </div>
-      <div id="collapseQuiz" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingQuiz">
-        <div class="panel-body">
-          {{> quiz}}
-        </div>
-      </div>
-    </div>
-
   </div>
+ 
+  {{> playMenu}}
+</template>
 
-  <div class="row play-menu">
-    <div class="col-xs-2" style="visibility: {{hidePreviousGroupArrow}};">
 
-      <button type="button" class="btn previous-word-group pull-left">
+<template name="quiz">
+  <div style="margin: 0.25em 0.75em;">
+    <p>
+      Current Score: {{totalCorrect}} / {{totalTaken}}
+      <br>
+      {{#if submitted}}
+        {{#if newScore}}
+          Good job! You got the whole sentence right :)
+        {{else}}
+          Not quite!
+        {{/if}}
+      {{/if}}
+    </p>
+
+    <p class="text-center">
+      {{#with sentence}}
+      <audio src="{{sentence.url}}" ></audio>
+      <span class="glyphicon glyphicon-play-circle audio btn-play-quiz"></span>
+      <br>
+      ({{sentence.sentence}}) <!-- Temporary for testing code -->
+      {{/with}}
+    </p>
+
+    <form role="form" class="user-guess">
+      <div class="row">
+        <div class="form-group col-lg-6" style="margin: 0 0;">
+          <div class="input-group">
+
+            <input type="text" name="text" class="user-guess form-control" placeholder="Type what you hear.">
+
+            <span class="input-group-btn">
+              <button type="submit" value="submit" class="user-guess btn btn-default" {{activeQuizSubmit}}>Check</button>
+            </span>
+
+          </div><!-- /input-group -->
+        </div>
+      </div>
+    </form>
+  </div>
+</template>
+
+
+<template name="playMenu">
+  <div class="play-menu" align="center">
+  <div class="container row {{fixedForMobile}}">
+
+    <div class="col-xs-3" style="visibility: {{hidePreviousGroupArrow}}; padding-left: 0;">
+      <button type="button" class="btn pull-left previous-word-group" style="padding-left: 0;">
         <h2><span class="glyphicon glyphicon-menu-left"></span></h2>
       </button>
-
     </div>
-    <div class="col-xs-8 text-center"> <!-- style="visibility: {{hideGroupMenu}};"> -->
 
-      <!--
-      <ul class="list-inline word-group">
+    <div class="col-xs-6" style="display: inline;"> <!-- style="visibility: {{hideGroupMenu}};"> -->
+      <!-- <ul class="list-inline word-group">
         {{#each groups}}
         <li>
           <button type="button" class="btn btn-default btn-word-group {{activeGroup}}" style="outline: none;">{{group}}</button>
         </li>
         {{/each}}
-      </ul>
-      -->
+      </ul> -->
 
-      {{> playMenu}}
-
+      {{> playModalButton}}
     </div>
-    <div class="col-xs-2" style="display: {{hideNextGroupArrow}};">
 
-      <button type="button" class="btn pull-next next-word-group">
+    <div class="col-xs-3" style="display: {{hideNextGroupArrow}}; padding-right: 0;">
+      <button type="button" class="btn pull-right next-word-group" style="padding-right: 0;">
         <h2><span class="glyphicon glyphicon-menu-right"></span></h2>
       </button>
     </div>
 
-    <div class="col-xs-2" style="display: {{hideNextQuizArrow}};">
-
-      <button type="button" class="btn pull-next next-quiz">
+    <div class="col-xs-3" style="display: {{hideNextQuizArrow}}; padding-right: 0;">
+      <button type="button" class="btn pull-right next-quiz" style="padding-right: 0;">
         <h2><span class="glyphicon glyphicon-menu-right"></span></h2>
       </button>
     </div>
-
   </div>
- 
+  </div>
+
+  {{> playModal}}
 </template>
 
 
-<template name="quiz">
-  <p>
-    Current Score: {{totalCorrect}} / {{totalTaken}}
-    <br>
-    {{#if submitted}}
-      {{#if newScore}}
-        Good job! You got the whole sentence right :)
-      {{else}}
-        Not quite!
-      {{/if}}
-    {{/if}}
-  </p>
-
-  <p class="text-center">
-  {{#with sentence}}
-  <button class="audio btn btn-play-quiz">
-    <audio src="{{sentence.url}}" ></audio>
-    <span class="glyphicon glyphicon-play-circle"></span>
-  </button>
-  <br>
-  ({{sentence.sentence}}) <!-- Temporary for testing code -->
-  {{/with}}
-  </p>
-
-  <form role="form" class="user-guess">
-    <div class="row">
-      <div class="form-group col-lg-6">
-        <div class="input-group">
-          <span class="input-group-btn">
-            <button type="submit" value="submit" class="user-guess btn btn-default" {{activeQuizSubmit}}>Check</button>
-          </span>
-          <input type="text" name="text" class="user-guess form-control" placeholder="Type what you hear.">
-        </div><!-- /input-group -->
-      </div>
-    </div>
-  </form>
-</template>
-
-
-<template name="playMenu">
+<template name="playModalButton"> <!-- ridiculous hack -->
   <button type="button" class="btn" data-toggle="modal" data-target="#playMenu" onclick="return false;">
     <h2><span class="glyphicon glyphicon-cog"></span></h2>
   </button>
+</template>
 
+
+<template name="playModal">
   <div class="modal fade" id="playMenu" tabindex="-1" role="dialog" aria-labelledby="playMenu" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content text-center">
 
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -208,15 +221,19 @@
 
 
 <template name="about">
-  About! Summary of what app does and how to use it
+  <div class="container main">
+    About! Summary of what app does and how to use it
+  </div>
 </template>
 
 
 <template name="progress">
-  Progress: graphs of data from sentence tests
-  {{#each scores}}
-    <p>{{quiz}}: {{total_correct}} / {{total_taken}}</p>
-  {{/each}}
+  <div class="container main">
+    Progress: graphs of data from sentence tests
+    {{#each scores}}
+      <p>{{quiz}}: {{total_correct}} / {{total_taken}}</p>
+    {{/each}}
+  </div>
 </template>
 
 
