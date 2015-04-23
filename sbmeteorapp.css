@@ -213,14 +213,29 @@ p a:hover, p a:active,
     padding-right: 2.5em;
   }
   .word-show {
-    padding-bottom: 75px; /* might want to use em units instead */
+    padding-bottom: 55px; /* might want to use em units instead */
   }
 }
 
-.play-menu > div >  div > .btn {
+.play-menu > div > div {
+  vertical-align: top;
+}
+
+.next-quiz, 
+.next-word-group, 
+.previous-word-group, 
+.btn-play-modal {
   background-color: transparent;
   border: none;
   color: #7F7FB3;
+  padding-top: 0.8em;
+  padding-bottom: 0.4em;
+}
+.next-quiz > h2, 
+.next-word-group > h2, 
+.previous-word-group > h2, 
+.btn-play-modal > h2 {
+  margin: 0 0;
 }
 
 .word-group {

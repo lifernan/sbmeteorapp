@@ -148,7 +148,7 @@
   <div class="container row {{fixedForMobile}}">
 
     <div class="col-xs-3" style="visibility: {{hidePreviousGroupArrow}}; padding-left: 0;">
-      <button type="button" class="btn pull-left previous-word-group" style="padding-left: 0;">
+      <button type="button" class="pull-left previous-word-group" style="padding-left: 0;">
         <h2><span class="glyphicon glyphicon-menu-left"></span></h2>
       </button>
     </div>
@@ -166,13 +166,13 @@
     </div>
 
     <div class="col-xs-3" style="display: {{hideNextGroupArrow}}; padding-right: 0;">
-      <button type="button" class="btn pull-right next-word-group" style="padding-right: 0;">
+      <button type="button" class="pull-right next-word-group" style="padding-right: 0;">
         <h2><span class="glyphicon glyphicon-menu-right"></span></h2>
       </button>
     </div>
 
     <div class="col-xs-3" style="display: {{hideNextQuizArrow}}; padding-right: 0;">
-      <button type="button" class="btn pull-right next-quiz" style="padding-right: 0;">
+      <button type="button" class="pull-right next-quiz">
         <h2><span class="glyphicon glyphicon-menu-right"></span></h2>
       </button>
     </div>
@@ -184,7 +184,7 @@
 
 
 <template name="playModalButton"> <!-- ridiculous hack -->
-  <button type="button" class="btn" data-toggle="modal" data-target="#playMenu" onclick="return false;">
+  <button type="button" class="btn-play-modal" data-toggle="modal" data-target="#playMenu" onclick="return false;">
     <h2><span class="glyphicon glyphicon-cog"></span></h2>
   </button>
 </template>
