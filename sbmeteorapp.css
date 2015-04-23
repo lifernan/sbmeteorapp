@@ -238,6 +238,11 @@ p a:hover, p a:active,
   margin: 0 0;
 }
 
+.play-menu > div > div > button:active {
+  color: rgba(136, 123, 182, 0.5);
+  text-shadow: 1px 4px 6px #FDBA13, 0 0 0 #000,1px 4px 6px #FDBA13;
+}
+
 .word-group {
   padding-top: 1.7em;
 }
@@ -262,6 +267,7 @@ p a:hover, p a:active,
 }
 
 /* Buttons */
-.btn:focus, .btn:active:focus {
+.btn:focus, .btn:active:focus,
+button:focus, button:active:focus {
   outline: none;
 }
