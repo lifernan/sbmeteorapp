@@ -1,153 +1,191 @@
 [
     {
+        "chapter": 1, 
         "number": 1, 
         "title": "Objects and Colors"
     }, 
     {
+        "chapter": 1, 
         "number": 2, 
         "title": "Objects and Associated Verbs"
     }, 
     {
+        "chapter": 1, 
         "number": 3, 
         "title": "Numbers"
     }, 
     {
+        "chapter": 1, 
         "number": 4, 
         "title": "Opposites and Conversational Phrases"
     }, 
     {
+        "chapter": 1, 
         "number": 5, 
         "title": "Words that Begin a Question"
     }, 
     {
+        "chapter": 2, 
         "number": 6, 
         "title": "Sound of a as in father and o as in hot"
     }, 
     {
+        "chapter": 2, 
         "number": 7, 
         "title": "Sound of o, as in home"
     }, 
     {
+        "chapter": 2, 
         "number": 8, 
         "title": "Sound of aw as in law"
     }, 
     {
+        "chapter": 2, 
         "number": 9, 
         "title": "Sound of u as in up"
     }, 
     {
+        "chapter": 2, 
         "number": 10, 
         "title": "Sound of oo as in look"
     }, 
     {
+        "chapter": 2, 
         "number": 11, 
         "title": "Sound of oo as in moon"
     }, 
     {
+        "chapter": 3, 
         "number": 12, 
         "title": "Sound of a as in gate"
     }, 
     {
+        "chapter": 3, 
         "number": 13, 
         "title": "Sound of e as in see"
     }, 
     {
+        "chapter": 3, 
         "number": 14, 
         "title": "Sound of er as in berth"
     }, 
     {
+        "chapter": 3, 
         "number": 15, 
         "title": "Sound of a as in cat"
     }, 
     {
+        "chapter": 3, 
         "number": 16, 
         "title": "Sound of i as in it"
     }, 
     {
+        "chapter": 3, 
         "number": 17, 
         "title": "Sound of e as in met"
     }, 
     {
+        "chapter": 4, 
         "number": 18, 
         "title": "Sound of i as in five"
     }, 
     {
+        "chapter": 4, 
         "number": 19, 
         "title": "Sound of ou as in out"
     }, 
     {
+        "chapter": 4, 
         "number": 20, 
         "title": "Sound of u as in huge"
     }, 
     {
+        "chapter": 4, 
         "number": 21, 
         "title": "Sound of oi as in boil"
     }, 
     {
+        "chapter": 5, 
         "number": 22, 
         "title": "Sound of b as in bay, and p as in pay"
     }, 
     {
+        "chapter": 5, 
         "number": 23, 
         "title": "Sound of l as in lake"
     }, 
     {
+        "chapter": 5, 
         "number": 24, 
         "title": "Sound of w as in way, and wh as in white"
     }, 
     {
+        "chapter": 5, 
         "number": 25, 
         "title": "Sound of m as in my"
     }, 
     {
+        "chapter": 5, 
         "number": 26, 
         "title": "Sound of r as in rabbit"
     }, 
     {
+        "chapter": 6, 
         "number": 27, 
         "title": "Sound of d as in den, and t as in ten"
     }, 
     {
+        "chapter": 6, 
         "number": 28, 
         "title": "Sound of v as in vine, and f as in fine"
     }, 
     {
+        "chapter": 6, 
         "number": 29, 
         "title": "Sound of j or soft g as in jell or ginger"
     }, 
     {
+        "chapter": 6, 
         "number": 30, 
         "title": "Sound of th as in that, and th as in think"
     }, 
     {
+        "chapter": 6, 
         "number": 31, 
         "title": "Sound of n as in no"
     }, 
     {
+        "chapter": 7, 
         "number": 32, 
         "title": "Sound of z as in zebra, and s or soft c as in sand or cent"
     }, 
     {
+        "chapter": 7, 
         "number": 33, 
         "title": "Sound of sh as in ship, and ch as in chip"
     }, 
     {
+        "chapter": 7, 
         "number": 34, 
         "title": "Sound of g as in get"
     }, 
     {
+        "chapter": 7, 
         "number": 35, 
         "title": "Sound of k or hard c as in kite or cake"
     }, 
     {
+        "chapter": 7, 
         "number": 36, 
         "title": "Sound of h as in heaven"
     }, 
     {
+        "chapter": 7, 
         "number": 37, 
         "title": "Sound of y as in yes"
     }, 
     {
+        "chapter": 7, 
         "number": 38, 
         "title": "Sound of ng as in king"
     }

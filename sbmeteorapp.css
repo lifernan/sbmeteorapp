@@ -48,11 +48,6 @@
 }
 
 /* Links */
-p a, p a:visited, 
-.media-heading a, 
-.media-heading a:visited {
-    color: #8669D6;
-}
 p a:hover, p a:active, 
 .media-heading a:hover, 
 .media-heading a:active {
@@ -129,12 +124,14 @@ p a:hover, p a:active,
   padding-top: 1em;
 }
 
+
+
 /* Lesson buttons */
 .btn-lesson {
   white-space: normal;
   max-width: 90%;
   text-align: left;
-  background-color: #FFFCF6;/* #FDBA13; */
+  color: black;
 }
 /*.lesson-title {
   color: #887BB6;

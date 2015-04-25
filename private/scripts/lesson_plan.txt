@@ -1,6 +1,9 @@
 # Lesson Plan for Speech Banana
 # Taken from Auditory Training for the Deaf by Whitehurst and Monsees (1952)
 
+chapter_1
+Everyday Language
+
 lesson_1 
 Objects and Colors
 
@@ -17,13 +20,21 @@ lesson_2 random 3
 Objects and Associated Verbs
 
 Vocabulary
-throw, ride, eat, read, light, sit, comb, bathe, wash, smell, write, wear
+throw, ride, eat
+read, light, sit
+comb, bathe, wash
+smell, write, wear
 
 lesson_3 random 3
 Numbers
 
 Vocabulary
-one, two, three, four, five, six, seven, eight, nine
+one, two, three
+four, five, six
+seven, eight, nine
+two, five, eight
+three, nine, four
+one, six, seven
 
 lesson_4
 Opposites and Conversational Phrases
@@ -42,6 +53,9 @@ Vocabulary
 where, who, which
 how much, how many, why
 what, when, whose
+
+chapter_2
+Low Pitched Vowels
 
 lesson_6
 Sound of a as in father and o as in hot
@@ -113,6 +127,9 @@ rude, rod, rowed
 Sounds in Words
 room, bathroom, moon, moonlight
 shoes, horseshoe, juice, grape juice, spoon, teaspoon
+
+chapter_3
+Vowels with High Frequency Components
 
 lesson_12
 Sound of a as in gate
@@ -192,6 +209,9 @@ Sounds in Words
 head, headache, bread, cornbread
 friend, friendship, bell, doorbell, guest, guest room
 
+chapter_4
+Diphthongs
+
 lesson_18
 Sound of i as in five
 
@@ -243,6 +263,9 @@ join, Jane, June
 Sounds in Words
 boil, voice, soybean, boy
 noise, oyster, enjoy, point, join, employ
+
+chapter_5
+Consonants I
 
 lesson_22
 Sound of b as in bay, and p as in pay
@@ -348,6 +371,9 @@ Sounds in Words
 red, redhead, run, home run
 room, schoolroom, rain, raincoat, row, rowboat
 
+chapter_6
+Consonants II
+
 lesson_27
 Sound of d as in den, and t as in ten
 
@@ -452,6 +478,9 @@ run, rub, rut
 Sounds in Words
 night, midnight, near, nearby, new, New Year
 note, notebook, sun, sunset, noon, afternoon
+
+chapter_7
+Consonants III
 
 lesson_32
 Sound of z as in zebra, and s or soft c as in sand or cent

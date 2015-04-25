@@ -500,7 +500,7 @@
         "word": "read", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/read_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 2, 
         "lesson": 2
     }, 
     {
@@ -508,7 +508,7 @@
         "word": "read", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/read_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 2, 
         "lesson": 2
     }, 
     {
@@ -516,7 +516,7 @@
         "word": "light", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/light_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 2, 
         "lesson": 2
     }, 
     {
@@ -524,7 +524,7 @@
         "word": "light", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/light_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 2, 
         "lesson": 2
     }, 
     {
@@ -532,7 +532,7 @@
         "word": "sit", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/sit_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 2, 
         "lesson": 2
     }, 
     {
@@ -540,7 +540,7 @@
         "word": "sit", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/sit_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 2, 
         "lesson": 2
     }, 
     {
@@ -548,7 +548,7 @@
         "word": "comb", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/comb_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 3, 
         "lesson": 2
     }, 
     {
@@ -556,7 +556,7 @@
         "word": "comb", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/comb_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 3, 
         "lesson": 2
     }, 
     {
@@ -564,7 +564,7 @@
         "word": "bathe", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/bathe_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 3, 
         "lesson": 2
     }, 
     {
@@ -572,7 +572,7 @@
         "word": "bathe", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/bathe_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 3, 
         "lesson": 2
     }, 
     {
@@ -580,7 +580,7 @@
         "word": "wash", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/wash_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 3, 
         "lesson": 2
     }, 
     {
@@ -588,7 +588,7 @@
         "word": "wash", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/wash_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 3, 
         "lesson": 2
     }, 
     {
@@ -596,7 +596,7 @@
         "word": "smell", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/smell_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 4, 
         "lesson": 2
     }, 
     {
@@ -604,7 +604,7 @@
         "word": "smell", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/smell_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 4, 
         "lesson": 2
     }, 
     {
@@ -612,7 +612,7 @@
         "word": "write", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/write_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 4, 
         "lesson": 2
     }, 
     {
@@ -620,7 +620,7 @@
         "word": "write", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/write_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 4, 
         "lesson": 2
     }, 
     {
@@ -628,7 +628,7 @@
         "word": "wear", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/wear_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 4, 
         "lesson": 2
     }, 
     {
@@ -636,7 +636,7 @@
         "word": "wear", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/wear_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 4, 
         "lesson": 2
     }, 
     {
@@ -692,7 +692,7 @@
         "word": "four", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/four_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 2, 
         "lesson": 3
     }, 
     {
@@ -700,7 +700,7 @@
         "word": "four", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/four_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 2, 
         "lesson": 3
     }, 
     {
@@ -708,7 +708,7 @@
         "word": "five", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/five_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 2, 
         "lesson": 3
     }, 
     {
@@ -716,7 +716,7 @@
         "word": "five", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/five_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 2, 
         "lesson": 3
     }, 
     {
@@ -724,7 +724,7 @@
         "word": "six", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/six_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 2, 
         "lesson": 3
     }, 
     {
@@ -732,7 +732,7 @@
         "word": "six", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/six_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 2, 
         "lesson": 3
     }, 
     {
@@ -740,7 +740,7 @@
         "word": "seven", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/seven_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 3, 
         "lesson": 3
     }, 
     {
@@ -748,7 +748,7 @@
         "word": "seven", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/seven_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 3, 
         "lesson": 3
     }, 
     {
@@ -756,7 +756,7 @@
         "word": "eight", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/eight_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 3, 
         "lesson": 3
     }, 
     {
@@ -764,7 +764,7 @@
         "word": "eight", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/eight_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 3, 
         "lesson": 3
     }, 
     {
@@ -772,7 +772,7 @@
         "word": "nine", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/nine_f.wav", 
         "gender": "f", 
-        "group": 1, 
+        "group": 3, 
         "lesson": 3
     }, 
     {
@@ -780,7 +780,151 @@
         "word": "nine", 
         "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/nine_m.wav", 
         "gender": "m", 
-        "group": 1, 
+        "group": 3, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "two", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/two_f.wav", 
+        "gender": "f", 
+        "group": 4, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "two", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/two_m.wav", 
+        "gender": "m", 
+        "group": 4, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "five", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/five_f.wav", 
+        "gender": "f", 
+        "group": 4, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "five", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/five_m.wav", 
+        "gender": "m", 
+        "group": 4, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "eight", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/eight_f.wav", 
+        "gender": "f", 
+        "group": 4, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "eight", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/eight_m.wav", 
+        "gender": "m", 
+        "group": 4, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "three", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/three_f.wav", 
+        "gender": "f", 
+        "group": 5, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "three", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/three_m.wav", 
+        "gender": "m", 
+        "group": 5, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "nine", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/nine_f.wav", 
+        "gender": "f", 
+        "group": 5, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "nine", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/nine_m.wav", 
+        "gender": "m", 
+        "group": 5, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "four", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/four_f.wav", 
+        "gender": "f", 
+        "group": 5, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "four", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/four_m.wav", 
+        "gender": "m", 
+        "group": 5, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "one", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/one_f.wav", 
+        "gender": "f", 
+        "group": 6, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "one", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/one_m.wav", 
+        "gender": "m", 
+        "group": 6, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "six", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/six_f.wav", 
+        "gender": "f", 
+        "group": 6, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "six", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/six_m.wav", 
+        "gender": "m", 
+        "group": 6, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "seven", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/seven_f.wav", 
+        "gender": "f", 
+        "group": 6, 
+        "lesson": 3
+    }, 
+    {
+        "set": 1, 
+        "word": "seven", 
+        "url": "https://raw.githubusercontent.com/lifernan/sbsound/master/american_english/lesson_words/seven_m.wav", 
+        "gender": "m", 
+        "group": 6, 
         "lesson": 3
     }, 
     {

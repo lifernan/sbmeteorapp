@@ -1,0 +1,30 @@
+[
+    {
+        "number": 1, 
+        "title": "Everyday Language"
+    }, 
+    {
+        "number": 2, 
+        "title": "Low Pitched Vowels"
+    }, 
+    {
+        "number": 3, 
+        "title": "Vowels with High Frequency Components"
+    }, 
+    {
+        "number": 4, 
+        "title": "Diphthongs"
+    }, 
+    {
+        "number": 5, 
+        "title": "Consonants I"
+    }, 
+    {
+        "number": 6, 
+        "title": "Consonants II"
+    }, 
+    {
+        "number": 7, 
+        "title": "Consonants III"
+    }
+]

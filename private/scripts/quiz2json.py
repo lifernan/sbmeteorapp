@@ -39,6 +39,6 @@ for lesson in lessons:
 
 # Write json to file
 
-with open("json_sentence_loader.json", "w") as loader:
+with open("loader_sentence.json", "w") as loader:
 	json.dump(all_sentences, loader, indent=4)
 
