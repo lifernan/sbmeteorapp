@@ -96,14 +96,14 @@ if (Meteor.isClient) {
     },
     'click a.word-set': function() {
       var setID = this._id;
-      var setName = SetsList.findOne(setID).set;
+      var setName = SetsList.findOne(setID).number;
       Session.setAuth('currentSet', setName);
       Session.setAuth('currentGroup', 1);
       Session.setAuth('currentQuiz', 0); // hack (uses 0 value to hide content, inefficient and roundabout)
     },
     'click button.btn-word-group': function() {
       var groupID = this._id;
-      var groupNumber = GroupsList.findOne(groupID).group;
+      var groupNumber = GroupsList.findOne(groupID).number;
       Session.setAuth('currentGroup', groupNumber);
     },
     'click a.quiz': function() {

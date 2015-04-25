@@ -39,14 +39,14 @@
     {{#each chapters}}
 
     <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="heading{{number}}">
+      <div class="panel-heading" role="tab" id="headingChapter{{number}}">
         <h4 class="panel-title">
-          <a class="collapsed chapter" data-toggle="collapse" data-parent="#accordion-chapter" href="#collapse{{number}}" aria-expanded="false" aria-controls="collapse{{number}}">
+          <a class="collapsed chapter" data-toggle="collapse" data-parent="#accordion-chapter" href="#collapseChapter{{number}}" aria-expanded="false" aria-controls="collapseChapter{{number}}">
             {{title}}
           </a>
         </h4>
       </div>
-      <div id="collapse{{number}}" class="panel-collapse collapse {{isActiveChapter}}" role="tabpanel" aria-labelledby="heading{{number}}">
+      <div id="collapseChapter{{number}}" class="panel-collapse collapse {{isActiveChapter}}" role="tabpanel" aria-labelledby="headingChapter{{number}}">
         <div class="panel-body">
 
           {{> lessonList}}
@@ -86,14 +86,14 @@
 
       {{#each sets}}
       <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="heading{{number}}">
+        <div class="panel-heading" role="tab" id="headingSet{{number}}">
           <h4 class="panel-title">
-            <a class="collapsed word-set" data-toggle="collapse" data-parent="#accordion" href="#collapse{{number}}" aria-expanded="false" aria-controls="collapse{{number}}">
+            <a class="collapsed word-set" data-toggle="collapse" data-parent="#accordion" href="#collapseSet{{number}}" aria-expanded="false" aria-controls="collapseSet{{number}}">
               {{title}}
             </a>
           </h4>
         </div>
-        <div id="collapse{{number}}" class="panel-collapse collapse {{isActiveSet}}" role="tabpanel" aria-labelledby="heading{{number}}">
+        <div id="collapseSet{{number}}" class="panel-collapse collapse {{isActiveSet}}" role="tabpanel" aria-labelledby="headingSet{{number}}">
           <div class="panel-body">
 
             <ul class="list-inline ul-word">
