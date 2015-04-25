@@ -1,27 +1,5 @@
 if (Meteor.isClient) {
 
-  /* Navigation Bar */
-  Template.navigationBar.helpers({
-    activeNav: function(n) { // need a better way of implementing menu item selectors
-      if (Session.get('currentNav') === n) {
-        return 'active';
-      }
-    }
-  });
-  Template.navigationBar.events({
-    'click #brand': function () {
-      Session.setAuth('currentNav','brand');
-    },
-    'click #about': function () {
-      Session.setAuth('currentNav','about');
-      Router.go('about');
-    },
-    'click #progress': function () {
-      Session.setAuth('currentNav','progress');
-      Router.go('progress');
-    }
-  });
-
   /* Chapter List */
   Template.chapterList.helpers({
     chapters: function() {
@@ -78,11 +56,6 @@ if (Meteor.isClient) {
         return 'in';
       }
     },
-    activeGroup: function() {
-      if (Session.get('currentGroup') === GroupsList.findOne(this._id).number) {
-        return 'active';
-      }
-    },
     activeQuiz: function() {
       if (Session.get('currentQuiz') !== 0) {
         return 'active';
@@ -101,11 +74,6 @@ if (Meteor.isClient) {
       Session.setAuth('currentGroup', 1);
       Session.setAuth('currentQuiz', 0); // hack (uses 0 value to hide content, inefficient and roundabout)
     },
-    'click button.btn-word-group': function() {
-      var groupID = this._id;
-      var groupNumber = GroupsList.findOne(groupID).number;
-      Session.setAuth('currentGroup', groupNumber);
-    },
     'click a.quiz': function() {
       Session.setAuth('currentSet', 0);  // hack (roundabout way to make sets and groups lists inactive during quiz)
       Session.setAuth('currentGroup', 0);
@@ -119,75 +87,9 @@ if (Meteor.isClient) {
       var r = Math.floor(Math.random() * sentences.count()); 
       Session.setAuth('r', r);
     },
-    'click button.next-quiz': function() {
-      var sentences = SentencesList.find({quiz: Session.get('currentQuiz'), gender: Session.get('currentGender')}); // need to store ids to avoid querying all the time
-      var r = Math.floor(Math.random() * sentences.count());
-      Session.setAuth('r', r);
-      Session.setAuth('submitted', false);
-    },
     'click .audio': function() { // hack (the audio object should be created on load of the page, not at event)
       var audio = new Audio(this.url); // error to fix: sentences ending in ? marks cannot play female voice
       audio.play();
-    },
-    'click button.previous-word-group': function() {
-      Session.setAuth('currentGroup', Session.get('currentGroup') - 1);
-    },
-    'click button.next-word-group': function() {
-      Session.setAuth('currentGroup', Session.get('currentGroup') + 1);
-    }
-  });
-
-  /* Play Menu (open menu, move for/backward through lesson) */
-  Template.playMenu.helpers({
-    groups: function() {
-      return GroupsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet')});
-    },
-    hideGroupMenu: function() {
-      if (GroupsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet')}).count() === 1) {
-        return 'hidden';
-      }
-    },
-    hidePreviousGroupArrow: function() {
-      if (Session.get('currentGroup') < 2)  {
-        return 'hidden';
-      }
-    },
-    offsetHiddenPreviousArrow: function() {
-      if (Session.get('currentGroup') < 2)  {
-        return 'col-xs-offset-2'; /* horrible hack */
-      }
-    },
-    hideNextGroupArrow: function() {
-      if (Session.get('currentGroup') === GroupsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet')}).count()) {
-        return 'none';
-      }
-    },
-    hideNextQuizArrow: function() {
-      if (Session.get('currentQuiz') === 0) {
-        return 'none';
-      }
-    },
-    fixedForMobile: function() {
-      if (screen.height < 600) {
-        return 'navbar-fixed-bottom';
-      }
-    }
-  });
-
-  /* Settings Menu (change gender of speaker) */
-  Template.playModal.helpers({
-    checkedGender: function(gender) {
-      if (Session.get('currentGender') === gender) {
-        return 'checked';
-      }
-    }
-  }); 
-  Template.playModal.events({
-    'change #male': function() {
-      Session.setAuth('currentGender', 'm');
-    },
-    'change #female': function() {
-      Session.setAuth('currentGender', 'f');
     }
   });
 
@@ -245,6 +147,66 @@ if (Meteor.isClient) {
     }
   });
 
+    /* Play Menu (open menu, move for/backward through lesson) */
+  Template.playMenu.helpers({
+    fixedForMobile: function() {
+      if (screen.height < 600) {
+        return 'navbar-fixed-bottom';
+      }
+    },
+    hidePreviousGroupArrow: function() {
+      if (Session.get('currentGroup') < 2)  {
+        return 'hidden';
+      }
+    },
+    offsetHiddenPreviousArrow: function() {
+      if (Session.get('currentGroup') < 2)  {
+        return 'col-xs-offset-2'; /* horrible hack */
+      }
+    },
+    hideNextGroupArrow: function() {
+      if (Session.get('currentGroup') === GroupsList.find({lesson: Session.get('currentLesson'), set: Session.get('currentSet')}).count()) {
+        return 'none';
+      }
+    },
+    hideNextQuizArrow: function() {
+      if (Session.get('currentQuiz') === 0) {
+        return 'none';
+      }
+    }
+  });
+  Template.playMenu.events({
+    'click button.previous-word-group': function() {
+      Session.setAuth('currentGroup', Session.get('currentGroup') - 1);
+    },
+    'click button.next-word-group': function() {
+      Session.setAuth('currentGroup', Session.get('currentGroup') + 1);
+    },
+    'click button.next-quiz': function() {
+      var sentences = SentencesList.find({quiz: Session.get('currentQuiz'), gender: Session.get('currentGender')}); // need to store ids to avoid querying all the time
+      var r = Math.floor(Math.random() * sentences.count());
+      Session.setAuth('r', r);
+      Session.setAuth('submitted', false);
+    }
+  });
+
+  /* Settings Menu (change gender of speaker) */
+  Template.playModal.helpers({
+    checkedGender: function(gender) {
+      if (Session.get('currentGender') === gender) {
+        return 'checked';
+      }
+    }
+  }); 
+  Template.playModal.events({
+    'change #male': function() {
+      Session.setAuth('currentGender', 'm');
+    },
+    'change #female': function() {
+      Session.setAuth('currentGender', 'f');
+    }
+  });
+
   /* Progress Page */
   Template.progress.helpers({
     scores: function() {
@@ -259,4 +221,26 @@ if (Meteor.isClient) {
       seriesData.push(dataPoint);
     });
   }
+
+    /* Navigation Bar */
+  Template.navigationBar.helpers({
+    activeNav: function(n) { // need a better way of implementing menu item selectors
+      if (Session.get('currentNav') === n) {
+        return 'active';
+      }
+    }
+  });
+  Template.navigationBar.events({
+    'click #brand': function () {
+      Session.setAuth('currentNav','brand');
+    },
+    'click #about': function () {
+      Session.setAuth('currentNav','about');
+      Router.go('about');
+    },
+    'click #progress': function () {
+      Session.setAuth('currentNav','progress');
+      Router.go('progress');
+    }
+  });
 }
