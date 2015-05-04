@@ -9,8 +9,10 @@
 <template name="layout">
   {{> navigationBar}}
   
-  {{> yield}}
-  
+  <div class="transitions-container" style="height:100%;">
+    {{> yield}}
+  </div>
+
   <!-- {{> footer}} -->
 </template>
 
@@ -33,29 +35,26 @@
 
 <template name="chapterList">
   <div class="container main">
+    <div class="panel-group" id="accordionChapter" role="tablist" aria-multiselectable="true">
 
-  <div class="panel-group" id="accordion-chapter" role="tablist" aria-multiselectable="false">
-    
-    {{#each chapters}}
+      {{#each chapters}}
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingChapter{{number}}">
+          <h4 class="panel-title">
+            <a class="collapsed chapter" data-toggle="collapse" data-parent="#accordionChapter" href="#collapseChapter{{number}}" aria-expanded="false" aria-controls="collapseChapter{{number}}">
+              {{title}}
+            </a>
+          </h4>
+        </div>
+        <div id="collapseChapter{{number}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingChapter{{number}}">
+          <div class="panel-body">
 
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingChapter{{number}}">
-        <h4 class="panel-title">
-          <a class="collapsed chapter" data-toggle="collapse" data-parent="#accordion-chapter" href="#collapseChapter{{number}}" aria-expanded="false" aria-controls="collapseChapter{{number}}">
-            {{title}}
-          </a>
-        </h4>
-      </div>
-      <div id="collapseChapter{{number}}" class="panel-collapse collapse {{isActiveChapter}}" role="tabpanel" aria-labelledby="headingChapter{{number}}">
-        <div class="panel-body">
+            {{> lessonList}}
 
-          {{> lessonList}}
-
+          </div>
         </div>
       </div>
-    </div>
-
-    {{/each}}
+      {{/each}}
 
     </div>
   </div>
@@ -66,7 +65,7 @@
     {{#each lessons}}
 
     <p>
-      <a class='btn-lesson' href="{{pathFor 'showLesson'}}">
+      <a class='btn-lesson' href="{{pathFor 'showLesson'}}" data-transition-out="scaleOut" data-transition-in="scaleIn">
         {{number}}: {{title}}
       </a>
     </p>
@@ -76,62 +75,64 @@
 
 
 <template name="showLesson">
-  <div class="container word-show">
-    {{#with lesson}}
-    <h3>Lesson {{number}}: {{title}}</h3>
-    {{/with}}
-    <hr>
+  <div class="transitions-content">
+    <div class="container word-show">
+      {{#with lesson}}
+      <h3>Lesson {{number}}: {{title}}</h3>
+      {{/with}}
+      <hr>
 
-    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
 
-      {{#each sets}}
-      <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingSet{{number}}">
-          <h4 class="panel-title">
-            <a class="collapsed word-set" data-toggle="collapse" data-parent="#accordion" href="#collapseSet{{number}}" aria-expanded="false" aria-controls="collapseSet{{number}}">
-              {{title}}
-            </a>
-          </h4>
-        </div>
-        <div id="collapseSet{{number}}" class="panel-collapse collapse {{isActiveSet}}" role="tabpanel" aria-labelledby="headingSet{{number}}">
-          <div class="panel-body">
+        {{#each sets}}
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingSet{{number}}">
+            <h4 class="panel-title">
+              <a class="collapsed word-set" data-toggle="collapse" data-parent="#accordion" href="#collapseSet{{number}}" aria-expanded="false" aria-controls="collapseSet{{number}}">
+                {{title}}
+              </a>
+            </h4>
+          </div>
+          <div id="collapseSet{{number}}" class="panel-collapse collapse {{isActiveSet}}" role="tabpanel" aria-labelledby="headingSet{{number}}">
+            <div class="panel-body">
 
-            <ul class="list-inline ul-word">
-              {{#each words}}
-              <li class="li-word">
-                <button class="audio btn btn-word">
-                  <h4>
-                    {{word}}
-                    <span class="glyphicon glyphicon-play-circle"></span>
-                  </h4>
-                  <audio src="{{url}}" ></audio>
-                </button>
-              </li>
-              {{/each}}
-            </ul>
+              <ul class="list-inline ul-word">
+                {{#each words}}
+                <li class="li-word">
+                  <button class="audio btn btn-word">
+                    <h4>
+                      {{word}}
+                      <span class="glyphicon glyphicon-play-circle"></span>
+                    </h4>
+                    <audio src="{{url}}" ></audio>
+                  </button>
+                </li>
+                {{/each}}
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      {{/each}}
+        {{/each}}
 
-      <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="quizPanel">
-          <h4 class="panel-title">
-            <a class="collapsed quiz" data-toggle="collapse" data-parent="#accordion" href="#collapseQuiz" aria-expanded="false" aria-controls="collapseQuiz">
-              Quiz
-            </a>
-          </h4>
-        </div>
-        <div id="collapseQuiz" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingQuiz">
-          <div class="panel-body">
-            {{> quiz}}
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="quizPanel">
+            <h4 class="panel-title">
+              <a class="collapsed quiz" data-toggle="collapse" data-parent="#accordion" href="#collapseQuiz" aria-expanded="false" aria-controls="collapseQuiz">
+                Quiz
+              </a>
+            </h4>
+          </div>
+          <div id="collapseQuiz" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingQuiz">
+            <div class="panel-body">
+              {{> quiz}}
+            </div>
           </div>
         </div>
       </div>
     </div>
+   
+    {{> playMenu}}
   </div>
- 
-  {{> playMenu}}
 </template>
 
 
